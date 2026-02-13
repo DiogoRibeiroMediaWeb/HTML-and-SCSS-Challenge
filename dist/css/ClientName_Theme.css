@@ -25,6 +25,8 @@
   --color-primary: #8637F8;
   --color-primary-light: #FFFFFF;
   --color-secondary: #2d9fb2;
+  --color-tertiary: #1A79CB;
+  --color-quaternary: #E8F1F9;
   --color-primary-hover: var(--color-primary-dark);
   --color-primary-selected: var(--color-primary-dark);
   --header-size: 56px;
@@ -660,6 +662,12 @@ h1, h2, h3, p {
           appearance: none;
   cursor: pointer;
 }
+.navmenu__toggle:hover {
+  opacity: var(--opacity-hover);
+}
+.navmenu__toggle:active {
+  opacity: var(--opacity-active);
+}
 .navmenu__profile {
   display: var(--display-flex);
   flex-direction: var(--flex-direction-column);
@@ -674,7 +682,7 @@ h1, h2, h3, p {
 .navmenu__profile__avatar {
   width: 48px;
   height: 48px;
-  flex: 0 0 48px;
+  flex: 0;
   border-radius: 999px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -718,7 +726,7 @@ h1, h2, h3, p {
   padding: var(--spacing-base);
   display: var(--display-flex);
   align-items: var(--align-items-center);
-  background: var(--color-background-content);
+  background: var(--color-quaternary);
 }
 .navmenu__stats {
   width: 100%;
@@ -733,13 +741,16 @@ h1, h2, h3, p {
   align-items: var(--align-items-center);
   gap: var(--spacing-xs);
   flex: 1;
+  background-color: var(--color-quaternary);
 }
 .navmenu__statLabel {
   opacity: 0.6;
   font-size: var(--font-size-xs);
+  color: var(--color-tertiary);
 }
 .navmenu__statValue {
   font-weight: var(--font-weight-bold);
+  color: var(--color-tertiary);
 }
 .navmenu__divider {
   width: 1px;
@@ -767,7 +778,7 @@ h1, h2, h3, p {
 .navmenu__calendarMonth {
   font-weight: var(--font-weight-semibold);
   line-height: 1;
-  font-size: 24px;
+  font-size: var(--font-size-xxl);
 }
 .navmenu__calendarMonthBtn {
   border: 0;
@@ -800,16 +811,16 @@ h1, h2, h3, p {
 .navmenu__calendarDow {
   font-weight: var(--font-weight-medium);
   line-height: 1;
-  font-size: 16px;
+  font-size: var(--font-size-base);
 }
 .navmenu__calendarNum {
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  font-size: 18px;
+  font-size: var(--font-size-m);
   opacity: 0.75;
 }
 .navmenu__calendarItem--active {
-  background: var(--color-primary);
+  background: var(--color-tertiary);
   border-radius: 999px;
   padding-top: var(--spacing-base);
   padding-bottom: var(--spacing-base);
@@ -830,7 +841,7 @@ h1, h2, h3, p {
   background: var(--color-background-content);
 }
 .navmenu__calendarDot--blue {
-  background: var(--color-primary);
+  background: var(--color-tertiary);
 }
 .navmenu__cards {
   flex: 1;
@@ -842,7 +853,7 @@ h1, h2, h3, p {
 .navmenu__card {
   border-radius: var(--border-radius-l);
   padding: var(--spacing-base);
-  background: var(--color-background-content);
+  background: var(--color-tertiary);
   position: var(--position-relative);
   overflow: hidden;
   flex: 1;
@@ -854,7 +865,7 @@ h1, h2, h3, p {
   font-size: var(--font-size-s);
 }
 .navmenu__cardTitle--dark {
-  color: var(--color-text-main, #101213);
+  color: var(--color-text-main);
 }
 .navmenu__cardMeta {
   margin: 0;
@@ -867,7 +878,7 @@ h1, h2, h3, p {
   opacity: 1;
 }
 .navmenu__card--primary {
-  background: var(--color-primary);
+  background: var(--color-tertiary);
   color: var(--color-background-content);
   padding: var(--spacing-base);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
@@ -921,7 +932,7 @@ h1, h2, h3, p {
   border: 2px solid rgba(255, 255, 255, 0.85);
   background: rgba(0, 0, 0, 0.12);
   font-weight: var(--font-weight-semibold);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
 }
 .navmenu__cardAction {
   width: 44px;
@@ -951,12 +962,13 @@ h1, h2, h3, p {
   transform: rotate(12deg);
 }
 .navmenu__card--secondary {
-  background: var(--color-background-content);
+  background: var(--color-quaternary);
   padding: var(--spacing-base);
   min-height: 96px;
 }
 .navmenu__cardContent {
   display: var(--display-flex);
+  background-color: var(--color-quaternary);
   gap: var(--spacing-base);
   align-items: var(--align-items-center);
 }
@@ -1005,7 +1017,7 @@ h1, h2, h3, p {
   display: var(--display-flex);
   flex-direction: var(--flex-direction-column);
   align-items: var(--align-items-start);
-  flex: 1 1 calc(50% - var(--spacing-l) / 2);
+  flex: 1 1 48%;
   min-width: 260px;
   min-height: 0;
   padding: var(--spacing-m);

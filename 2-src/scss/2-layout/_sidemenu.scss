@@ -35,6 +35,8 @@
     border: 0;
     appearance: none;
     cursor: pointer;
+
+    &:hover { opacity: var(--opacity-hover); } &:active { opacity: var(--opacity-active); }
   }
 
 
@@ -54,7 +56,7 @@
   &__profile__avatar {
     width: 48px;
     height: 48px;
-    flex: 0 0 48px;
+    flex: 0;
     border-radius: 999px;
     object-fit: cover;
     display: var(--display-block);
@@ -107,7 +109,7 @@
     display: var(--display-flex);
     align-items: var(--align-items-center);
 
-    background: var(--color-background-content);
+    background: var(--color-quaternary);
   }
 
   &__stats {
@@ -124,15 +126,18 @@
     align-items: var(--align-items-center);
     gap: var(--spacing-xs);
     flex: 1;
+    background-color: var(--color-quaternary);
   }
 
   &__statLabel {
     opacity: 0.6;
     font-size: var(--font-size-xs);
+    color: var(--color-tertiary)
   }
 
   &__statValue {
     font-weight: var(--font-weight-bold);
+    color: var(--color-tertiary)
   }
 
   &__divider {
@@ -166,7 +171,7 @@
   &__calendarMonth {
     font-weight: var(--font-weight-semibold);
     line-height: 1;
-    font-size: 24px;
+    font-size: var(--font-size-xxl);
   }
 
   &__calendarMonthBtn {
@@ -207,18 +212,18 @@
   &__calendarDow {
     font-weight: var(--font-weight-medium);
     line-height: 1;
-    font-size: 16px;
+    font-size: var(--font-size-base);
   }
 
   &__calendarNum {
     font-weight: var(--font-weight-bold);
     line-height: 1;
-    font-size: 18px;
+    font-size: var(--font-size-m);
     opacity: 0.75;
   }
 
   &__calendarItem--active {
-    background: var(--color-primary);
+    background: var(--color-tertiary);
     border-radius: 999px;
     padding-top: var(--spacing-base);
     padding-bottom: var(--spacing-base);
@@ -243,7 +248,7 @@
   }
 
   &__calendarDot--blue {
-    background: var(--color-primary);
+    background: var(--color-tertiary);
   }
 
 
@@ -259,7 +264,7 @@
   &__card {
     border-radius: var(--border-radius-l);
     padding: var(--spacing-base);
-    background: var(--color-background-content);
+    background: var(--color-tertiary);
     position: var(--position-relative);
     overflow: hidden;
     flex: 1;
@@ -273,7 +278,7 @@
   }
 
   &__cardTitle--dark {
-    color: var(--color-text-main, #101213);
+    color: var(--color-text-main);
   }
 
   &__cardMeta {
@@ -290,7 +295,7 @@
 
 
   &__card--primary {
-    background: var(--color-primary);
+    background: var(--color-tertiary);
     color: var(--color-background-content);
 
     padding: var(--spacing-base);
@@ -354,7 +359,7 @@
     border: 2px solid rgba(255, 255, 255, 0.85);
     background: rgba(0, 0, 0, 0.12);
     font-weight: var(--font-weight-semibold);
-    font-size: 12px;
+    font-size: var(--font-size-xs);
   }
 
   &__cardAction {
@@ -392,13 +397,14 @@
 
 
   &__card--secondary {
-    background: var(--color-background-content);
+    background: var(--color-quaternary);
     padding: var(--spacing-base);
     min-height: 96px;
   }
 
   &__cardContent {
     display: var(--display-flex);
+    background-color: var(--color-quaternary);
     gap: var(--spacing-base);
     align-items: var(--align-items-center);
   }
