@@ -115,6 +115,7 @@
 
     //border-radius
     --border-radius-xxl: 32px;
+    --border-radius-xxld: 32px 0 0 32px;
     --border-radius-xl: 0 24px 24px 0;
     --border-radius-l: 16px;
     --border-radius-m: 8px;
@@ -151,9 +152,7 @@
     --display-flex: flex;
     --display-grid: grid;
 
-    //opacity
-    --opacity-hover: 0.2;
-    --opacity-active: 0.4;
+    
 
     //posititon
     --position-static: static; 
@@ -164,6 +163,45 @@
     //flex-wrap
     --flex-wrap-nowrap: nowrap;
     --flex-wrap-wrap: wrap;
+
+
+
+    --layout-navmenu-width: 390px;
+
+    --control-height: 40px;
+    --icon-size: 24px;
+
+    --avatar-s: 48px;
+    --avatar-m: 68px;
+
+    --card-height-desktop: 220px;
+    --card-height-tablet: 200px;
+    --card-height-mobile: 180px;
+    --card-height-short: 170px;
+
+    --border-radius-pill: 999px;
+
+    //opacity
+    --opacity-card-meta:0.9;
+    --opacity-muted: 0.7;
+    --opacity-soft: 0.6;
+    --opacity-faint: 0.55;
+    --opacity-disabled: 0.25;
+    --opacity-secondary: 0.75;
+    --opacity-hover: 0.2;
+    --opacity-active: 0.4;
+
+    --border-subtle: rgba(0, 0, 0, 0.12);
+
+    --surface-muted: rgba(16, 18, 19, 0.08);
+    --text-muted-strong: rgba(16, 18, 19, 0.8);
+
+    --avatar-ring: rgba(255, 255, 255, 0.85);
+    --overlay-soft: rgba(0, 0, 0, 0.12);
+    --decor-highlight: rgba(255, 255, 255, 0.18);
+
+    --shadow-floating: -1px 1px 4px 0 rgba(0, 0, 0, 0.05);
+    --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .highlight-styles,
