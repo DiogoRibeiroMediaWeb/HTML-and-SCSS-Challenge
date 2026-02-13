@@ -1,0 +1,73 @@
+//NAVBAR CSS
+.navbar {
+  display: var(--display-flex);//sem valor absoluto
+  flex-direction: var(--flex-direction-column);//sem valor absoluto
+  background-color: var(--color-primary);
+  width: 112px;
+  height: 100vh;
+  border-radius: var(--border-radius-xl);//sem valor absoluto
+
+  &__top {
+    display: var(--display-flex);//sem valor absoluto
+    justify-content: var(--justify-content-space-between);//sem valor absoluto
+    align-items: var(--align-items-center);//sem valor absoluto
+    padding: var(--spacing-base);
+  }
+
+  &__toggle {
+    width: 22px;
+    height: 22px;
+    border: none;//sem valor absoluto
+    background: transparent;//sem valor absoluto
+    color: var(--color-text-primary);
+    
+    &:hover { opacity: var(--opacity-hover); } ;//sem valor absoluto
+     &:active { opacity: var(--opacity-active); }//sem valor absoluto
+  }
+
+  &__menu {
+    flex: 1;
+    display: var(--display-flex);//sem valor absoluto
+    border-radius: var(--border-radius-xl);
+    flex-direction: var(--flex-direction-column);//sem valor absoluto
+  }
+
+  &__buttons {
+    display: var(--display-flex);//sem valor absoluto
+    flex-direction: var(--flex-direction-column);//sem valor absoluto
+    align-items: var(--align-items-center);//sem valor absoluto
+    flex: 1;//sem valor absoluto
+    gap: var(--spacing-xl);//sem valor absoluto
+    margin-top: var(--spacing-xl);
+  }
+
+  &__defbutton {
+    margin-top: auto;//sem valor absoluto
+    display: var(--display-flex);//sem valor absoluto
+    justify-content: var(--justify-content-center);//sem valor absoluto
+    padding-bottom: var(--spacing-l);
+
+    &:hover { opacity: var(--opacity-hover); } &:active { opacity: var(--opacity-active); }//sem valor absoluto
+  }
+
+  &__button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+
+    &:hover {
+      opacity: var(--opacity-hover);//sem valor absoluto
+    }
+
+    ;
+
+    &:active {
+      opacity: var(--opacity-active);//sem valor absoluto
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.card {
+  display: var(--display-flex);
+  flex-direction: var(--flex-direction-column);
+  align-items: var(--align-items-start);
+
+  flex: 1 1 calc(50% - (var(--spacing-l) / 2));
+  min-width: 260px;
+  min-height: 0;
+
+  padding: var(--spacing-m);
+  gap: var(--spacing-m);
+
+  border-radius: var(--border-radius-content);
+  background: var(--color-background-content);
+  box-shadow: var(--shadow-none);
+
+  &__header {
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    gap: var(--spacing-base);
+    align-self: stretch;
+    position: var(--position-relative);
+    min-width: 0;
+  }
+
+  &__avatar {
+    width: 68px;
+    height: 68px;
+
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    align-items: var(--align-items-center);
+
+    border-radius: var(--border-radius-circle);
+    background: var(--color-background-content);
+
+    flex: 0;
+  }
+
+  &__heading {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    color: var(--color-text-main);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__role {
+    color: var(--color-text-subtle);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__more {
+    width: 24px;
+    height: 24px;
+
+    position: var(--position-absolute);
+    right: var(--spacing-base);
+    top: var(--spacing-base);
+  }
+
+  &__body {
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    gap: var(--spacing-base);
+  }
+
+  &__description {
+    color: var(--color-text-subtle);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+  }
+
+  &__meta {
+    color: var(--color-text-subtle);
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-regular);
+  }
+
+  &__footer {
+    margin-top: auto;
+    width: 100%;
+  }
+
+  &__cta {
+    display: var(--display-flex);
+    justify-content: var(--justify-content-center);
+    align-items: var(--align-items-center);
+
+    width: 100%;
+    height: 48px;
+
+    border-radius: var(--border-radius-rounded);
+  }
+
+
+  &--compact {
+    padding: var(--spacing-s);
+  }
+
+  &--full {
+    flex: 1 1 100%;
+  }
+
+  @media (max-width: 1200px) {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}

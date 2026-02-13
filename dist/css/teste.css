@@ -1,0 +1,106 @@
+@charset "UTF-8";
+.navmenu {
+  min-width: 390px;
+  max-width: 390px;
+  height: 100vh;
+  display: var(--display-flex);
+  position: relative;
+  flex-direction: var(--flex-direction-column);
+  gap: var(--spacing-m, 24px);
+  background-color: var(--color-bg-page-layout-container);
+}
+.navmenu__toggle {
+  display: var(--display-flex);
+  width: 40px;
+  height: 80px;
+  padding: var(--spacing-m, 24px) var(--spacing-s, 8px);
+  flex-direction: var(--flex-direction-column);
+  justify-content: var(--justify-content-center);
+  align-items: var(--align-items-center);
+  position: var(--position-absolute);
+  left: -40px;
+  top: 72px;
+  border-radius: 32px 0 0 32px;
+  background: var(--color-bg-page-layout-container);
+  box-shadow: -1px 1px 4px 0 rgba(0, 0, 0, 0.05);
+  border: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.navmenu__profile {
+  display: var(--display-flex);
+  justify-content: var(--justify-content-space-between);
+  gap: var(--spacing-base, 16px);
+}
+.navmenu__profile__info {
+  display: var(--display-flex);
+  justify-content: var(--justify-content-center);
+  gap: 12px;
+  min-width: 0;
+}
+.navmenu__profile__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  flex: 0 0 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.navmenu__identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  flex: 1; /* ocupa espaço entre avatar e cadeado */
+  min-width: 0; /* para permitir que o conteúdo encolha corretamente */
+}
+.navmenu__lock {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.navmenu__profile__data {
+  width: 100%;
+  min-height: 96px;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  background: #eef6ff;
+}
+.navmenu__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 0; /* para permitir que o conteúdo interno encolha corretamente */
+}
+.navmenu__info__date {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.navmenu__info__week {
+  display: flex;
+  justify-content: space-between;
+}
+.navmenu__info__day {
+  display: flex;
+  justify-content: space-between;
+}
+.navmenu__info__day--active {
+  border-radius: 50%;
+}
+.navmenu__Card {
+  border-radius: 16px;
+  padding: 16px;
+}/*# sourceMappingURL=teste.css.map */

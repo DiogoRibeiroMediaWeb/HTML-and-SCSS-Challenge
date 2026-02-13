@@ -1,0 +1,442 @@
+.navmenu {
+  width: 390px;
+  height: 100vh;
+  position: var(--position-relative);
+
+  display: var(--display-flex);
+  flex-direction: var(--flex-direction-column);
+
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  padding-left: var(--spacing-l);
+  padding-right: var(--spacing-l);
+
+  gap: var(--spacing-m);
+  background: var(--color-bg-page-layout-container);
+
+  &__toggle{
+    display: var(--display-flex);
+    width: 40px;
+    height: 80px;
+    padding: var(--spacing-m) var(--spacing-s);
+
+    flex-direction: var(--flex-direction-column);
+    justify-content: var(--justify-content-center);
+    align-items: var(--align-items-center);
+
+    position: var(--position-absolute);
+    left: -40px;
+    top: 72px;
+
+    border-radius: 32px 0 0 32px;
+    background: var(--color-bg-page-layout-container);
+    box-shadow: -1px 1px 4px 0 rgba(0, 0, 0, 0.05);
+
+    border: 0;
+    appearance: none;
+    cursor: pointer;
+  }
+
+
+  &__profile {
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    gap: var(--spacing-base);
+  }
+
+  &__profile__row {
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    gap: var(--spacing-base);
+    min-width: 0;
+  }
+
+  &__profile__avatar {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 999px;
+    object-fit: cover;
+    display: var(--display-block);
+  }
+
+  &__identity {
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    gap: var(--spacing-xs);
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    opacity: 0.7;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__lock {
+    width: 24px;
+    height: 24px;
+    flex: 0;
+
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    justify-content: var(--justify-content-center);
+
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__profile__data {
+    width: 100%;
+    min-height: 96px;
+
+    border-radius: var(--border-radius-l);
+    padding: var(--spacing-base);
+
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+
+    background: var(--color-background-content);
+  }
+
+  &__stats {
+    width: 100%;
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    justify-content: var(--justify-content-space-between);
+    gap: var(--spacing-s);
+  }
+
+  &__stat {
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    align-items: var(--align-items-center);
+    gap: var(--spacing-xs);
+    flex: 1;
+  }
+
+  &__statLabel {
+    opacity: 0.6;
+    font-size: var(--font-size-xs);
+  }
+
+  &__statValue {
+    font-weight: var(--font-weight-bold);
+  }
+
+  &__divider {
+    width: 1px;
+    height: 48px;
+    opacity: 0.2;
+    background: currentColor;
+  }
+
+  &__info {
+    flex: 1;
+    min-height: 0; 
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    gap: var(--spacing-base);
+  }
+
+
+  &__calendar {
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    gap: var(--spacing-base);
+  }
+
+  &__calendarHeader {
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    gap: var(--spacing-s);
+  }
+
+  &__calendarMonth {
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+    font-size: 24px;
+  }
+
+  &__calendarMonthBtn {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    justify-content: var(--justify-content-center);
+  }
+
+  &__calendarRow {
+    display: var(--display-flex);
+    justify-content: var(--justify-content-space-between);
+    gap: var(--spacing-s);
+  }
+
+  &__calendarItem {
+    flex: 1;
+    min-width: 0;
+
+    border: 0;
+    background: transparent;
+    padding: 0;
+
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    align-items: var(--align-items-center);
+    justify-content: var(--justify-content-center);
+
+    gap: var(--spacing-xs);
+    cursor: pointer;
+
+    position: var(--position-relative);
+  }
+
+  &__calendarDow {
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+    font-size: 16px;
+  }
+
+  &__calendarNum {
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    font-size: 18px;
+    opacity: 0.75;
+  }
+
+  &__calendarItem--active {
+    background: var(--color-primary);
+    border-radius: 999px;
+    padding-top: var(--spacing-base);
+    padding-bottom: var(--spacing-base);
+
+    .navmenu__calendarDow,
+    .navmenu__calendarNum {
+      color: var(--color-background-content);
+      opacity: 1;
+    }
+  }
+
+  &__calendarItem--disabled {
+    opacity: 0.25;
+    cursor: default;
+  }
+
+  &__calendarDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--color-background-content);
+  }
+
+  &__calendarDot--blue {
+    background: var(--color-primary);
+  }
+
+
+  &__cards {
+    flex: 1;
+    overflow: hidden;
+
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    gap: var(--spacing-base);
+  }
+
+  &__card {
+    border-radius: var(--border-radius-l);
+    padding: var(--spacing-base);
+    background: var(--color-background-content);
+    position: var(--position-relative);
+    overflow: hidden;
+    flex: 1;
+  }
+
+  &__cardTitle {
+    margin: 0;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
+    font-size: var(--font-size-s); 
+  }
+
+  &__cardTitle--dark {
+    color: var(--color-text-main, #101213);
+  }
+
+  &__cardMeta {
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.3;
+    font-size: var(--font-size-xs);
+  }
+
+  &__cardMeta--dark {
+    color: var(--color-text-subtle);
+    opacity: 1;
+  }
+
+
+  &__card--primary {
+    background: var(--color-primary);
+    color: var(--color-background-content);
+
+    padding: var(--spacing-base);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    min-height: 140px;
+  }
+
+  &__cardHeader {
+    margin-bottom: var(--spacing-xs);
+    position: var(--position-relative);
+    z-index: 1;
+  }
+
+  &__cardBody {
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    gap: var(--spacing-xs);
+    position: var(--position-relative);
+    z-index: 1;
+  }
+
+  &__cardFooter {
+    margin-top: var(--spacing-s);
+
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    justify-content: var(--justify-content-space-between);
+
+    position: var(--position-relative);
+    z-index: 1;
+  }
+
+  &__avatars {
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+  }
+
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    display: var(--display-block);
+    margin-left: -8px;
+
+    &:first-child { margin-left: 0; }
+  }
+
+  &__avatarMore {
+    width: 36px;
+    height: 24px;
+
+    margin-left: -8px;
+    border-radius: 999px;
+
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    justify-content: var(--justify-content-center);
+
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    background: rgba(0, 0, 0, 0.12);
+    font-weight: var(--font-weight-semibold);
+    font-size: 12px;
+  }
+
+  &__cardAction {
+    width: 44px;
+    height: 44px;
+
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+
+    border-radius: 18px 0 0 0;
+    background: var(--color-background-content);
+
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    justify-content: var(--justify-content-center);
+  }
+
+  &__cardActionIcon {
+    font-size: var(--font-size-xxl);
+    line-height: 1;
+    color: var(--color-primary);
+  }
+
+  &__cardDecor {
+    position: var(--position-absolute);
+    right: -40px;
+    top: -20px;
+    width: 110px;
+    height: 110px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    transform: rotate(12deg);
+  }
+
+
+  &__card--secondary {
+    background: var(--color-background-content);
+    padding: var(--spacing-base);
+    min-height: 96px;
+  }
+
+  &__cardContent {
+    display: var(--display-flex);
+    gap: var(--spacing-base);
+    align-items: var(--align-items-center);
+  }
+
+  &__cardText {
+    flex: 1;
+    min-width: 0;
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    gap: var(--spacing-xs);
+  }
+
+  &__cardLink {
+    margin-top: var(--spacing-xs);
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  &__cardIcon {
+    width: 80px;
+    flex: 0 0 80px;
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    justify-content: var(--justify-content-center);
+    opacity: 0.25;
+  }
+
+  &__cardIconGlyph {
+    font-size: var(--font-size-xxxl);
+    line-height: 1;
+  }
+
+  &__sectionTitle {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-s);
+    margin-top: var(--spacing-xs);
+  }
+}
