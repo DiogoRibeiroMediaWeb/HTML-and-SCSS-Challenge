@@ -33,7 +33,6 @@
 
     border: 0;
     appearance: none;
-    cursor: pointer;
 
     &:hover { opacity: var(--opacity-hover); } &:active { opacity: var(--opacity-active); }
   }
@@ -95,7 +94,6 @@
     border: 0;
     background: transparent;
     padding: 0;
-    cursor: pointer;
   }
 
   &__profile__data {
@@ -143,7 +141,6 @@
     width: 1px;
     height: 48px;
     opacity: var(--opacity-hover);
-    background: currentColor;
   }
 
   &__info {
@@ -177,7 +174,6 @@
     border: 0;
     background: transparent;
     padding: 0;
-    cursor: pointer;
     display: var(--display-flex);
     align-items: var(--align-items-center);
     justify-content: var(--justify-content-center);
@@ -203,7 +199,6 @@
     justify-content: var(--justify-content-center);
 
     gap: var(--spacing-xs);
-    cursor: pointer;
 
     position: var(--position-relative);
   }
@@ -236,7 +231,6 @@
 
   &__calendarItem--disabled {
     opacity: var(--opacity-disabled);
-    cursor: default;
   }
 
   &__calendarDot {
@@ -244,10 +238,12 @@
     height: 6px;
     border-radius: var(--border-radius-pill);
     background: var(--color-background-content);
+    align-items: var(--align-items-end);
   }
 
   &__calendarDot--blue {
     background: var(--color-tertiary);
+    align-items: var(--align-items-end);
   }
 
 
@@ -366,7 +362,6 @@
 
     border: 0;
     padding: 0;
-    cursor: pointer;
 
     border-radius: 18px 0 0 0;
     background: var(--color-background-content);
@@ -389,7 +384,7 @@
     width: 110px;
     height: 110px;
     border-radius: var(--border-radius-pill);
-    background: rgba(255, 255, 255, 0.18);
+    background: var(--text-muted-strong);
   }
 
 
@@ -419,7 +414,6 @@
     border: 0;
     background: transparent;
     padding: 0;
-    cursor: pointer;
     font-weight: var(--font-weight-semibold);
   }
 

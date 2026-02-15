@@ -69,6 +69,22 @@
     position: var(--position-absolute);
     right: var(--spacing-base);
     top: var(--spacing-base);
+
+    display: var(--display-flex);
+    align-items: var(--align-items-center);
+    justify-content: var(--justify-content-center);
+
+    border: 0;
+    padding: 0;
+    background: transparent;
+
+    &:hover {
+      opacity: var(--opacity-hover);//sem valor absoluto
+    }
+
+    &:active {
+      opacity: var(--opacity-active);//sem valor absoluto
+    }
   }
 
   &__body {
@@ -103,6 +119,7 @@
     height: 48px;
 
     border-radius: var(--border-radius-rounded);
+    background: var(--color-button-card);
   }
 
 

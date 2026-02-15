@@ -1,7 +1,7 @@
 @use "../0-abstract/scss-functions" as scss-functions;
 :root {
     /* Rocket Generic variable colors */
-    
+    --color-button-card: #F4F0FF;
     /* input */
     --color-background-input:               #fff;
     --color-background-input-disabled:      #F1F3F5;
@@ -114,6 +114,7 @@
     --border-size-xs: 0.25px;
 
     //border-radius
+    --border-radius-xxxl: 44px;
     --border-radius-xxl: 32px;
     --border-radius-xxld: 32px 0 0 32px;
     --border-radius-xl: 0 24px 24px 0;
