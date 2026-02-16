@@ -448,10 +448,9 @@ h1, h2, h3, p {
   height: var(--control-height);
   padding: 0 var(--spacing-base);
   border-radius: var(--pill-radius);
-  font-weight: var(--font-weight-semibold);
-  white-space: nowrap;
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-s);
   border: 2px solid transparent;
-  background: transparent;
   border-radius: var(--border-radius-xxxl);
 }
 .container__action:hover {
@@ -501,15 +500,7 @@ h1, h2, h3, p {
   outline: 0;
   background: transparent;
   font-size: var(--font-size-s);
-  color: var(--color-text-main);
-}
-.container__searchInput::-moz-placeholder {
-  color: var(--color-primary);
-  opacity: var(--placeholder-opacity);
-}
-.container__searchInput::placeholder {
-  color: var(--color-primary);
-  opacity: var(--placeholder-opacity);
+  font-weight: var(--font-weight-regular);
 }
 .container__filters {
   flex: 0;

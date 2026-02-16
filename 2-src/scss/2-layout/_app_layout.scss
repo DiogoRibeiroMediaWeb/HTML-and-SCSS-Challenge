@@ -85,10 +85,9 @@
     height: var(--control-height);
     padding: 0 var(--spacing-base);
     border-radius: var(--pill-radius);
-    font-weight: var(--font-weight-semibold);
-    white-space: nowrap;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-s);
     border: 2px solid transparent;
-    background: transparent;
     border-radius: var(--border-radius-xxxl);
     &:hover {
       opacity: var(--opacity-hover);//sem valor absoluto
@@ -150,12 +149,7 @@
     outline: 0;
     background: transparent;
     font-size: var(--font-size-s);
-    color: var(--color-text-main);
-
-    &::placeholder {
-      color: var(--color-primary);
-      opacity: var(--placeholder-opacity);
-    }
+    font-weight: var(--font-weight-regular);
   }
 
   &__filters {
