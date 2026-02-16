@@ -1,18 +1,13 @@
 .navmenu {
   width: 390px;
+  min-width: 390px;
   height: 100vh;
   position: var(--position-relative);
 
   display: var(--display-flex);
   flex-direction: var(--flex-direction-column);
-
-  padding-top: var(--spacing-xl);
-  padding-bottom: var(--spacing-xl);
-  padding-left: var(--spacing-l);
-  padding-right: var(--spacing-l);
-
-  gap: var(--spacing-m);
   background: var(--color-bg-page-layout-container);
+  padding:  var(--spacing-xl) var(--spacing-l);
 
   &__toggle{
     display: var(--display-flex);
@@ -37,64 +32,77 @@
     &:hover { opacity: var(--opacity-hover); } &:active { opacity: var(--opacity-active); }
   }
 
+  &__submenu {
+    display: var(--display-flex);
+    flex-direction: var(--flex-direction-column);
+    gap: var(--spacing-m);
+    width: 326px;
+    min-width: 326px;
+  }
+
 
   &__profile {
     display: var(--display-flex);
     flex-direction: var(--flex-direction-column);
-    gap: var(--spacing-base);
+    gap: var(--spacing-m);
   }
 
+
+  //isto envolve o avatar, o nome , row e bloqueio
   &__profile__row {
     display: var(--display-flex);
     align-items: var(--align-items-center);
     gap: var(--spacing-base);
-    min-width: 0;
+    width: 308px;
+    height: 48px;
   }
+
 
   &__profile__avatar {
     width: 48px;
     height: 48px;
-    flex: 0;
-    border-radius: var(--border-radius-pill);
-    object-fit: cover;
+    border-radius: 300px;
     display: var(--display-block);
   }
 
+  //container para o nome e row
   &__identity {
     display: var(--display-flex);
     flex-direction: var(--flex-direction-column);
+    justify-content: flex-start;
     gap: var(--spacing-xs);
     flex: 1;
-    min-width: 0;
+    width: 141.23px;
+    min-width: 141.23px;
   }
 
   &__name {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.2;
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-bold);
+    line-height: 21px;
+    width: 103px;
+    min-width: 103px;
+    height: 21px;
+    color: #101213;//ver variavel;
   }
 
   &__subtitle {
-    opacity: var(--opacity-muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-xs);
+    line-height: 18px;
+    width: 123.18px;
+    min-width: 123.18px;
+    height: 23px;
+    color: rgba(0, 7, 17, 0.6);//depois ver no opacity;
   }
 
   &__lock {
-    width: 24px;
-    height: 24px;
-    flex: 0;
-
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
     display: var(--display-flex);
     align-items: var(--align-items-center);
     justify-content: var(--justify-content-center);
-
     border: 0;
     background: transparent;
     padding: 0;
@@ -102,14 +110,12 @@
 
   &__profile__data {
     width: 100%;
-    min-height: 96px;
-
+    min-width: 100%;
+    height: 76px;
     border-radius: var(--border-radius-l);
     padding: var(--spacing-base);
-
     display: var(--display-flex);
     align-items: var(--align-items-center);
-
     background: var(--color-quaternary);
   }
 
