@@ -234,11 +234,11 @@
       <button class="navmenu__toggle">
         <img src="1-dist/assets/chevron-right.png" alt="Close menu" />
       </button>
-      <div class="navmenu__submenu"> 
-      <!--Profile-->
-      <div class="navmenu__profile">
-        <!--HeaderProfile-->
-        <div class="navmenu__profile__row">
+      <div class="navmenu__submenu">
+        <!--Profile-->
+        <div class="navmenu__profile">
+          <!--HeaderProfile-->
+          <div class="navmenu__profile__row">
             <div><!--container no avatar-->
               <img class="navmenu__profile__avatar" src="1-dist/assets/Mask.png" alt="User avatar" />
             </div>
@@ -246,198 +246,200 @@
             <div class="navmenu__identity">
               <div class="navmenu__name">Isaac Williams</div>
               <div class="navmenu__subtitle">25 years old, London</div>
+            </div>
+            <!--cadeado-->
+            <button class="navmenu__lock">
+              <img src="1-dist/assets/unlock.png" alt="Unlock profile" />
+            </button>
           </div>
-          <!--cadeado-->
-          <button class="navmenu__lock">
-            <img src="1-dist/assets/unlock.png" alt="Unlock profile" />
-          </button>
+          <!--BodyProfile-->
+          <div class="navmenu__profile__data">
+            <div class="navmenu__stats">
+              <div class="navmenu__stat">
+                <div class="navmenu__statLabel">Blood</div>
+                <div class="navmenu__statValue">O+</div>
+              </div>
+
+              <div class="navmenu__divider"></div>
+
+              <div class="navmenu__stat">
+                <div class="navmenu__statLabel">Height</div>
+                <div class="navmenu__statValue">186cm</div>
+              </div>
+
+              <div class="navmenu__divider"></div>
+
+              <div class="navmenu__stat">
+                <div class="navmenu__statLabel">Weight</div>
+                <div class="navmenu__statValue">90kg</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--BodyProfile-->
-        <div class="navmenu__profile__data">
-          <div class="navmenu__stats">
-            <div class="navmenu__stat">
-              <div class="navmenu__statLabel">Blood</div>
-              <div class="navmenu__statValue">O+</div>
+        <!-----------------------------------------Separação do menu-------------------------------------------->
+        <!--Dates-->
+        <!-- INFO SECTION -->
+        <div class="navmenu__info">
+          <!-- CALENDAR -->
+          <section class="navmenu__calendar" aria-label="Calendar">
+            <!-- Month row -->
+            <div class="navmenu__calendarHeader">
+              <h3 class="navmenu__calendarMonth">March</h3>
+              <button class="navmenu__calendarMonthBtn" type="button" aria-label="Change month">
+                <img src="1-dist/assets/caret-down.png" alt="Change month" />
+              </button>
             </div>
 
-            <div class="navmenu__divider"></div>
+            <!-- Days row -->
+            <div class="navmenu__calendarRow">
+              <div class="navmenu__calendarItem">
+                <div class="navmenu__calendarDow">Mon</div>
+                <div class="navmenu__calendarNum">9</div>
+              </div>
 
-            <div class="navmenu__stat">
-              <div class="navmenu__statLabel">Height</div>
-              <div class="navmenu__statValue">186cm</div>
+              <div class="navmenu__calendarItem">
+                <div class="navmenu__calendarDow">Tues</div>
+                <div class="navmenu__calendarNum">10</div>
+              </div>
+
+              <button class="navmenu__calendarItem navmenu__calendarItem--active" type="button" aria-current="date">
+                <div class="navmenu__calendarDow">Wed</div>
+                <!--<span class="navmenu__calendarDot" aria-hidden="true"></span>-->
+                <div class="navmenu__calendarNum">11</div>
+              </button>
+
+              <div class="navmenu__calendarItem">
+                <div class="navmenu__calendarDow">Thu</div>
+                <div class="navmenu__calendarNum">12</div>
+              </div>
+
+              <div class="navmenu__calendarItem">
+                <div class="navmenu__calendarDow">Fri</div>
+                <!--<span class="navmenu__calendarDot navmenu__calendarDot--blue" aria-hidden="true"></span>-->
+                <div class="navmenu__calendarNum">13</div>
+              </div>
+
+              <div class="navmenu__calendarItem">
+                <div class="navmenu__calendarDow">Sat</div>
+                <div class="navmenu__calendarNum">14</div>
+              </div>
+
+              <div class="navmenu__calendarItem">
+                <div class="navmenu__calendarDow">Sun</div>
+                <div class="navmenu__calendarNum">15</div>
+              </div>
+
+              <div class="navmenu__calendarItem navmenu__calendarItem--disabled">
+                <div class="navmenu__calendarDow">Mon</div>
+                <div class="navmenu__calendarNum">16</div>
+              </div>
+            </div>
+          </section>
+
+          <div class="navmenu__cards">
+
+            
+            <div> <!--primeiro e segundi card-->
+              <!-- ================= PRIMARY CARD ================= -->
+              <div class="navmenu__card navmenu__card--primary">
+
+                <div class="navmenu__cardHeader">
+                  <h3 class="navmenu__cardTitle">Match against Team B</h3>
+                </div>
+
+                <div class="navmenu__cardBody">
+                  <p class="navmenu__cardMeta">9:00AM - 11:30AM</p>
+                  <p class="navmenu__cardMeta">Coach : Nelson Hendricks</p>
+                </div>
+
+                <div class="navmenu__cardFooter">
+
+                  <div class="navmenu__avatars">
+                    <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=12" alt="">
+                    <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=15" alt="">
+                    <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=22" alt="">
+                    <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=28" alt="">
+                    <span class="navmenu__avatarMore">+12</span>
+                  </div>
+
+                  <button class="navmenu__cardAction" type="button" aria-label="Open card">
+                    <span class="navmenu__cardActionIcon">›</span>
+                  </button>
+
+                </div>
+              </div>
+
+              <!-- ================= SECONDARY CARD ================= -->
+              <div class="navmenu__card navmenu__card--secondary">
+
+                <div class="navmenu__cardContent">
+
+                  <div class="navmenu__cardText">
+                    <h3 class="navmenu__cardTitle navmenu__cardTitle--dark">
+                      Health appointment
+                    </h3>
+
+                    <p class="navmenu__cardMeta navmenu__cardMeta--dark">
+                      9:00AM - 11:30AM
+                    </p>
+
+                    <p class="navmenu__cardMeta navmenu__cardMeta--dark">
+                      Dr. Douglas Wade
+                    </p>
+
+                    <button class="navmenu__cardLink" type="button">
+                      Follow-up
+                    </button>
+                  </div>
+
+                  <div class="navmenu__cardIcon" aria-hidden="true">
+                    <img src="1-dist/assets/chevron-right copy.png" alt="Health icon" />
+                    <span class="navmenu__cardIconGlyph">
+                      <img src="1-dist/assets/caduceus.png" alt="Caduceus icon" />
+                    </span>
+                  </div>
+
+                </div>
+
+              </div>
             </div>
 
-            <div class="navmenu__divider"></div>
 
-            <div class="navmenu__stat">
-              <div class="navmenu__statLabel">Weight</div>
-              <div class="navmenu__statValue">90kg</div>
+            <!-- ================= SECTION TITLE ================= -->
+            <div class="navmenu__sectionTitle">
+              Post workout sessions
+            </div>
+
+
+            <!-- ================= SECONDARY CARD ================= -->
+            <div class="navmenu__card navmenu__card--secondary">
+
+              <div class="navmenu__cardContent">
+
+                <div class="navmenu__cardText">
+                  <h3 class="navmenu__cardTitle navmenu__cardTitle--dark">
+                    Meditation
+                  </h3>
+
+                  <p class="navmenu__cardMeta navmenu__cardMeta--dark">
+                    5:00PM - 6:00PM
+                  </p>
+
+                  <p class="navmenu__cardMeta navmenu__cardMeta--dark">
+                    Coach : Tim Bjorvick
+                  </p>
+                </div>
+
+                <div class="navmenu__cardIcon" aria-hidden="true">
+                  <img src="1-dist/assets/lotus.png" alt="Lotus icon" />
+                </div>
+
+              </div>
+
             </div>
           </div>
         </div>
       </div>
-      <!-----------------------------------------Separação do menu-------------------------------------------->
-      <!--Dates-->
-      <!-- INFO SECTION -->
-      <section class="navmenu__info">
-        <!-- CALENDAR -->
-        <section class="navmenu__calendar" aria-label="Calendar">
-          <!-- Month row -->
-          <div class="navmenu__calendarHeader">
-            <h3 class="navmenu__calendarMonth">March</h3>
-
-            <button class="navmenu__calendarMonthBtn" type="button" aria-label="Change month">
-              <img src="1-dist/assets/caret-down.png" alt="Change month" />
-            </button>
-          </div>
-
-          <!-- Days row -->
-          <div class="navmenu__calendarRow">
-            <div class="navmenu__calendarItem">
-              <div class="navmenu__calendarDow">Mon</div>
-              <div class="navmenu__calendarNum">9</div>
-            </div>
-
-            <div class="navmenu__calendarItem">
-              <div class="navmenu__calendarDow">Tues</div>
-              <div class="navmenu__calendarNum">10</div>
-            </div>
-
-            <button class="navmenu__calendarItem navmenu__calendarItem--active" type="button" aria-current="date">
-              <div class="navmenu__calendarDow">Wed</div>
-              <!--<span class="navmenu__calendarDot" aria-hidden="true"></span>-->
-              <div class="navmenu__calendarNum">11</div>
-            </button>
-
-            <div class="navmenu__calendarItem">
-              <div class="navmenu__calendarDow">Thu</div>
-              <div class="navmenu__calendarNum">12</div>
-            </div>
-
-            <div class="navmenu__calendarItem">
-              <div class="navmenu__calendarDow">Fri</div>
-              <!--<span class="navmenu__calendarDot navmenu__calendarDot--blue" aria-hidden="true"></span>-->
-              <div class="navmenu__calendarNum">13</div>
-            </div>
-
-            <div class="navmenu__calendarItem">
-              <div class="navmenu__calendarDow">Sat</div>
-              <div class="navmenu__calendarNum">14</div>
-            </div>
-
-            <div class="navmenu__calendarItem">
-              <div class="navmenu__calendarDow">Sun</div>
-              <div class="navmenu__calendarNum">15</div>
-            </div>
-
-            <div class="navmenu__calendarItem navmenu__calendarItem--disabled">
-              <div class="navmenu__calendarDow">Mon</div>
-              <div class="navmenu__calendarNum">16</div>
-            </div>
-          </div>
-        </section>
-
-        <div class="navmenu__cards">
-
-          <!-- ================= PRIMARY CARD ================= -->
-          <article class="navmenu__card navmenu__card--primary">
-
-            <div class="navmenu__cardHeader">
-              <h3 class="navmenu__cardTitle">Match against Team B</h3>
-            </div>
-
-            <div class="navmenu__cardBody">
-              <p class="navmenu__cardMeta">9:00AM - 11:30AM</p>
-              <p class="navmenu__cardMeta">Coach : Nelson Hendricks</p>
-            </div>
-
-            <div class="navmenu__cardFooter">
-
-              <div class="navmenu__avatars">
-                <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=12" alt="">
-                <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=15" alt="">
-                <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=22" alt="">
-                <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=28" alt="">
-                <span class="navmenu__avatarMore">+12</span>
-              </div>
-
-              <button class="navmenu__cardAction" type="button" aria-label="Open card">
-                <span class="navmenu__cardActionIcon">›</span>
-              </button>
-
-            </div>
-          </article>
-
-          <!-- ================= SECONDARY CARD ================= -->
-          <article class="navmenu__card navmenu__card--secondary">
-
-            <div class="navmenu__cardContent">
-
-              <div class="navmenu__cardText">
-                <h3 class="navmenu__cardTitle navmenu__cardTitle--dark">
-                  Health appointment
-                </h3>
-
-                <p class="navmenu__cardMeta navmenu__cardMeta--dark">
-                  9:00AM - 11:30AM
-                </p>
-
-                <p class="navmenu__cardMeta navmenu__cardMeta--dark">
-                  Dr. Douglas Wade
-                </p>
-
-                <button class="navmenu__cardLink" type="button">
-                  Follow-up
-                </button>
-              </div>
-
-              <div class="navmenu__cardIcon" aria-hidden="true">
-                <img src="1-dist/assets/chevron-right copy.png" alt="Health icon" />
-                <span class="navmenu__cardIconGlyph">
-                  <img src="1-dist/assets/caduceus.png" alt="Caduceus icon" />
-                </span>
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- ================= SECTION TITLE ================= -->
-          <div class="navmenu__sectionTitle">
-            Post workout sessions
-          </div>
-
-
-          <!-- ================= SECONDARY CARD ================= -->
-          <article class="navmenu__card navmenu__card--secondary">
-
-            <div class="navmenu__cardContent">
-
-              <div class="navmenu__cardText">
-                <h3 class="navmenu__cardTitle navmenu__cardTitle--dark">
-                  Meditation
-                </h3>
-
-                <p class="navmenu__cardMeta navmenu__cardMeta--dark">
-                  5:00PM - 6:00PM
-                </p>
-
-                <p class="navmenu__cardMeta navmenu__cardMeta--dark">
-                  Coach : Tim Bjorvick
-                </p>
-              </div>
-
-              <div class="navmenu__cardIcon" aria-hidden="true">
-                <img src="1-dist/assets/lotus.png" alt="Lotus icon" />
-              </div>
-
-            </div>
-
-          </article>
-        </div>
-        </div>
-      </section>
     </aside>
   </div>
 </body>

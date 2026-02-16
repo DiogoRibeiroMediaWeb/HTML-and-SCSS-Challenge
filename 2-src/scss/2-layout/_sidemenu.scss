@@ -32,6 +32,7 @@
     &:hover { opacity: var(--opacity-hover); } &:active { opacity: var(--opacity-active); }
   }
 
+  ////////////////////////////////////////submenu que envolve o profile e o calendario////////////////////////////////////////
   &__submenu {
     display: var(--display-flex);
     flex-direction: var(--flex-direction-column);
@@ -40,7 +41,7 @@
     min-width: 326px;
   }
 
-
+  /////////////////////////////////////////profile que envolve o avatar, nome, row e bloqueio////////////////////////////////////////
   &__profile {
     display: var(--display-flex);
     flex-direction: var(--flex-direction-column);
@@ -48,7 +49,7 @@
   }
 
 
-  //isto envolve o avatar, o nome , row e bloqueio
+  //////////////////////////////isto envolve o avatar, o nome , row e bloqueio ////////////////////////////////////
   &__profile__row {
     display: var(--display-flex);
     align-items: var(--align-items-center);
@@ -57,7 +58,6 @@
     height: 48px;
   }
 
-
   &__profile__avatar {
     width: 48px;
     height: 48px;
@@ -65,7 +65,7 @@
     display: var(--display-block);
   }
 
-  //container para o nome e row
+  ////////////////////////////container para o nome e row/////////////////////////////////////////////////////
   &__identity {
     display: var(--display-flex);
     flex-direction: var(--flex-direction-column);
@@ -107,13 +107,13 @@
     background: transparent;
     padding: 0;
   }
+  //////////////////////////////container que tem altura, tipo de sangue e peso////////////////////////////////////////////
 
   &__profile__data {
     width: 100%;
     min-width: 100%;
     height: 76px;
-    border-radius: var(--border-radius-l);
-    padding: var(--spacing-base);
+    border-radius: var(--border-radius-l);//devia ser 19px
     display: var(--display-flex);
     align-items: var(--align-items-center);
     background: var(--color-quaternary);
@@ -138,15 +138,16 @@
 
   &__statLabel {
     opacity: var(--opacity-soft);
-    color: var(--color-tertiary);
+    color: #A3C9EA;//depois ver variavel;
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-medium);
   }
 
   &__statValue {
-    color: var(--color-tertiary);
+    color: #5FA1DA;
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-bold);
+
   }
 
   &__divider {
@@ -156,6 +157,8 @@
     background-color: #A3C9EA;
   }
 
+
+  //////////////////////////container para o calendario e as cards/////////////////////////////////////////////////////
   &__info {
     flex: 1;
     min-height: 0; 
@@ -171,6 +174,7 @@
     gap: var(--spacing-base);
   }
 
+  /////////////////////////container que tem o mes e a seta para mudar o mes/////////////////////////////////////////
   &__calendarHeader {
     display: var(--display-flex);
     align-items: var(--align-items-center);
@@ -179,8 +183,7 @@
 
   &__calendarMonth {
     font-weight: var(--font-weight-bold);
-    line-height: 1;
-    font-size: var(--font-size-s);
+      font-size: var(--font-size-s);
   }
 
   &__calendarMonthBtn {
