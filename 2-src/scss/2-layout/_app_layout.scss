@@ -53,14 +53,9 @@
   }
 
   &__title {
-    margin: 0;
     font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-bold);
-    line-height: 1.1;
+    font-weight: var(--font-weight-medium);
     color: var(--color-primary);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   &__heading{
@@ -75,20 +70,8 @@
     gap: var(--spacing-xs);
     flex-wrap: var(--flex-wrap-wrap);
     font-size: var(--font-size-s);
-    opacity: var(--placeholder-opacity);
-  }
-
-  &__crumb {
-    white-space: nowrap;
-  }
-
-  &__crumbSep {
-    opacity: var(--crumb-sep-opacity);
-  }
-
-  &__crumb--active {
-    opacity: var(--crumb-active-opacity);
-  }
+    font-weight: var(--font-weight-regular);
+    }
 
   &__actions {
     display: var(--display-flex);

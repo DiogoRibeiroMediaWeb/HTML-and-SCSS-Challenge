@@ -26,15 +26,7 @@
   &__avatar {
     width: 68px;
     height: 68px;
-
-    display: var(--display-flex);
-    justify-content: var(--justify-content-center);
-    align-items: var(--align-items-center);
-
     border-radius: var(--border-radius-circle);
-    background: var(--color-background-content);
-
-    flex: 0;
   }
 
   &__heading {
@@ -46,20 +38,12 @@
     color: var(--color-text-main);
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-medium);
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   &__role {
     color: var(--color-text-subtle);
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-regular);
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   &__more {

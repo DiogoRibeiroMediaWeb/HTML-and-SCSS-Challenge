@@ -420,14 +420,9 @@ h1, h2, h3, p {
   line-height: 1;
 }
 .container__title {
-  margin: 0;
   font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-bold);
-  line-height: 1.1;
+  font-weight: var(--font-weight-medium);
   color: var(--color-primary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .container__heading {
   display: flex;
@@ -440,16 +435,7 @@ h1, h2, h3, p {
   gap: var(--spacing-xs);
   flex-wrap: var(--flex-wrap-wrap);
   font-size: var(--font-size-s);
-  opacity: var(--placeholder-opacity);
-}
-.container__crumb {
-  white-space: nowrap;
-}
-.container__crumbSep {
-  opacity: var(--crumb-sep-opacity);
-}
-.container__crumb--active {
-  opacity: var(--crumb-active-opacity);
+  font-weight: var(--font-weight-regular);
 }
 .container__actions {
   display: var(--display-flex);
@@ -1082,12 +1068,7 @@ h1, h2, h3, p {
 .card__avatar {
   width: 68px;
   height: 68px;
-  display: var(--display-flex);
-  justify-content: var(--justify-content-center);
-  align-items: var(--align-items-center);
   border-radius: var(--border-radius-circle);
-  background: var(--color-background-content);
-  flex: 0;
 }
 .card__heading {
   flex: 1;
@@ -1097,17 +1078,11 @@ h1, h2, h3, p {
   color: var(--color-text-main);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-medium);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .card__role {
   color: var(--color-text-subtle);
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-regular);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .card__more {
   width: 24px;
