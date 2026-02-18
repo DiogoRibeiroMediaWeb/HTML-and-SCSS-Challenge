@@ -377,6 +377,7 @@ h1, h2, h3, p {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: var(--color-neutral-0);
 }
 
 .container {
@@ -390,6 +391,7 @@ h1, h2, h3, p {
   display: var(--display-flex);
   flex-direction: var(--flex-direction-column);
   gap: var(--spacing-l);
+  background-color: #F2F9FF;
 }
 .container__header {
   display: var(--display-flex);

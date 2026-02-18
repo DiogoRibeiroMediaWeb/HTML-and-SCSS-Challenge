@@ -3,6 +3,7 @@
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: var(--color-neutral-0);
 }
 
 .container {
@@ -19,6 +20,7 @@
   display: var(--display-flex);
   flex-direction: var(--flex-direction-column);
   gap: var(--spacing-l);
+  background-color: #F2F9FF;
 
   &__header {
     display: var(--display-flex);
