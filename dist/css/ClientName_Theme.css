@@ -417,16 +417,21 @@ h1, h2, h3, p {
   padding: 0;
   color: var(--color-primary);
   font-size: var(--font-size-h2);
-  line-height: 1;
+  width: 40px;
+  height: 40px;
 }
 .container__title {
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-medium);
   color: var(--color-primary);
 }
+.container__btn_h1 {
+  display: flex;
+  align-items: center;
+}
 .container__heading {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex: 1;
 }
 .container__breadcrumb {
@@ -692,7 +697,7 @@ h1, h2, h3, p {
   flex-direction: var(--flex-direction-column);
   gap: var(--spacing-m);
   width: 326px;
-  min-width: 326px;
+  min-width: 0px;
 }
 .navmenu__profile {
   display: var(--display-flex);
@@ -719,14 +724,14 @@ h1, h2, h3, p {
   gap: var(--spacing-xs);
   flex: 1;
   width: 141.23px;
-  min-width: 141.23px;
+  min-width: 0px;
 }
 .navmenu__name {
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-bold);
   line-height: 21px;
   width: 103px;
-  min-width: 103px;
+  min-width: 0px;
   height: 21px;
   color: #101213;
 }
@@ -735,13 +740,13 @@ h1, h2, h3, p {
   font-size: var(--font-size-xs);
   line-height: 18px;
   width: 123.18px;
-  min-width: 123.18px;
+  min-width: 0px;
   height: 23px;
   color: rgba(0, 7, 17, 0.6);
 }
 .navmenu__lock {
   width: 40px;
-  min-width: 40px;
+  min-width: 0px;
   height: 40px;
   display: var(--display-flex);
   align-items: var(--align-items-center);
@@ -752,7 +757,7 @@ h1, h2, h3, p {
 }
 .navmenu__profile__data {
   width: 100%;
-  min-width: 100%;
+  min-width: 0px;
   height: 76px;
   border-radius: var(--border-radius-l);
   display: var(--display-flex);
@@ -792,8 +797,8 @@ h1, h2, h3, p {
   background-color: #A3C9EA;
 }
 .navmenu__info {
-  flex: 1;
   min-height: 0;
+  width: 100%;
   display: var(--display-flex);
   flex-direction: var(--flex-direction-column);
   gap: var(--spacing-base);
@@ -873,9 +878,14 @@ h1, h2, h3, p {
   background: var(--color-tertiary);
   align-items: var(--align-items-end);
 }
+.navmenu__cardGroup {
+  display: var(--display-flex);
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
 .navmenu__cards {
-  flex: 1;
   overflow: hidden;
+  width: 100%;
   display: var(--display-flex);
   flex-direction: var(--flex-direction-column);
   gap: var(--spacing-base);
@@ -886,13 +896,12 @@ h1, h2, h3, p {
   background: var(--color-tertiary);
   position: var(--position-relative);
   overflow: hidden;
-  flex: 1;
 }
 .navmenu__cardTitle {
-  margin: 0;
   font-weight: var(--font-weight-bold);
-  line-height: 1.2;
   font-size: var(--font-size-s);
+  align-items: var(--align-items-center);
+  line-height: 21px;
 }
 .navmenu__cardTitle--dark {
   color: var(--color-text-main);
@@ -913,7 +922,8 @@ h1, h2, h3, p {
   background: var(--color-tertiary);
   color: var(--color-background-content);
   padding: var(--spacing-base);
-  min-height: 140px;
+  min-height: 0px;
+  width: 326px;
 }
 .navmenu__cardHeader {
   margin-bottom: var(--spacing-xs);
@@ -966,11 +976,10 @@ h1, h2, h3, p {
   font-size: var(--font-size-xs);
 }
 .navmenu__cardAction {
-  width: 44px;
-  height: 44px;
+  width: 50px;
   border: 0;
   padding: 0;
-  border-radius: 18px 0 0 0;
+  border-radius: 16px 0 16px 0;
   background: var(--color-background-content);
   display: var(--display-flex);
   align-items: var(--align-items-center);
@@ -978,7 +987,6 @@ h1, h2, h3, p {
 }
 .navmenu__cardActionIcon {
   font-size: var(--font-size-xxl);
-  line-height: 1;
   color: var(--color-primary);
 }
 .navmenu__cardDecor {
@@ -986,14 +994,13 @@ h1, h2, h3, p {
   right: -40px;
   top: -20px;
   width: 110px;
-  height: 110px;
   border-radius: var(--border-radius-pill);
   background: var(--text-muted-strong);
 }
 .navmenu__card--secondary {
   background: var(--color-quaternary);
   padding: var(--spacing-base);
-  min-height: 96px;
+  width: 327px;
 }
 .navmenu__cardContent {
   display: var(--display-flex);
@@ -1026,7 +1033,6 @@ h1, h2, h3, p {
 }
 .navmenu__cardIconGlyph {
   font-size: var(--font-size-xxxl);
-  line-height: 1;
 }
 .navmenu__sectionTitle {
   font-weight: var(--font-weight-bold);
@@ -2242,4 +2248,56 @@ h1, h2, h3, p {
 
 .border-radius-round {
   border-radius: var(--border-radius-round);
+}
+
+.gap-xxs {
+  gap: var(--spacing-xs);
+}
+
+.gap-xs {
+  gap: calc(var(--spacing-xs) + var(--spacing-xs));
+}
+
+.gap-s {
+  gap: var(--spacing-s);
+}
+
+.gap-base {
+  gap: var(--spacing-base);
+}
+
+.gap-m {
+  gap: var(--spacing-m);
+}
+
+.gap-l {
+  gap: var(--spacing-l);
+}
+
+.gap-xl {
+  gap: var(--spacing-xl);
+}
+
+.gap-xxl {
+  gap: var(--spacing-xxl);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-none {
+  display: none;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+}
+
+.flex-direction-column {
+  flex-direction: column;
 }/*# sourceMappingURL=ClientName_Theme.css.map */

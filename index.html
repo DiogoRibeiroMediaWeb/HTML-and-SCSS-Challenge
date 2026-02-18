@@ -54,12 +54,12 @@
 
       <!-- HEADER -->
       <header class="container__header">
-        <div class="container__heading">
-          <button class="container__back" type="button"><img src="1-dist/assets/angle-left.png" alt="Back" /></button>
-
-          <div class="container__titles">
+        <div class="container__heading">  
+          <div class="container__btn_h1">
+            <button class="container__back" type="button"><img src="1-dist/assets/angle-left.png" alt="Back" /></button>
             <h1 class="container__title">Detail page</h1>
-
+          </div>
+          <div class="container__titles">
             <nav class="container__breadcrumb" aria-label="Breadcrumb">
               <a class="container__breadcrumb">Dashboard</a>
               <span class="container__breadcrumbSep"><img src="1-dist/assets/angle-right.png" alt="" /></span>
@@ -339,10 +339,10 @@
           <div class="navmenu__cards">
 
             
-            <div> <!--primeiro e segundi card-->
+            <div class="navmenu__cardGroup"> <!--primeiro e segundi card-->
               <!-- ================= PRIMARY CARD ================= -->
               <div class="navmenu__card navmenu__card--primary">
-
+                
                 <div class="navmenu__cardHeader">
                   <h3 class="navmenu__cardTitle">Match against Team B</h3>
                 </div>
@@ -404,8 +404,9 @@
               </div>
             </div>
 
-
-            <!-- ================= SECTION TITLE ================= -->
+            
+            <div class="display-flex gap-xs flex-direction-column"> <!--terceiro e quarto card-->
+              <!-- ================= SECTION TITLE ================= -->
             <div class="navmenu__sectionTitle">
               Post workout sessions
             </div>
@@ -436,6 +437,7 @@
 
               </div>
 
+            </div>
             </div>
           </div>
         </div>

@@ -49,7 +49,8 @@
     padding: 0;
     color: var(--color-primary);
     font-size: var(--font-size-h2);
-    line-height: 1;
+    width: 40px;
+    height: 40px;
   }
 
   &__title {
@@ -58,9 +59,14 @@
     color: var(--color-primary);
   }
 
+  &__btn_h1{
+    display: flex;
+    align-items: center;
+  }
+
   &__heading{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex: 1;
   }
 

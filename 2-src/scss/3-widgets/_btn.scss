@@ -1,0 +1,34 @@
+.btn {
+  // Reset & Estrutura Base
+  display: flex;
+  align-items: var(--align-items-center);
+  justify-content: var(--justify-content-center);
+  cursor: pointer;
+  border: 1px transparent; // Border fina por padrão
+  // O que pediste especificamente:
+  height: var(--control-height);       // Altura dinâmica
+  border-radius: var(--border-radius-l); // Border radius (ajusta para o teu token)
+  
+  // Estados de Interação
+  &:hover { opacity: var(--opacity-hover); }
+  &:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+  &:active { opacity: var(--opacity-active); }
+
+  // Variante Principal (Primary) com Neutral 10
+  &--primary {
+    background-color: var(--color-primary); 
+    color: var(--color-neutral-10); // Texto claro sobre fundo escuro
+  }
+
+  &--secondary {
+    background-color: #fff;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &--tertiary {
+    background-color: #E9ECEF;
+    color: rgba(0, 0, 17, 0.75);
+    border: none;
+  }
+}

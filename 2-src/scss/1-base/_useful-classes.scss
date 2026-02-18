@@ -351,3 +351,21 @@
 .border-radius-hard {border-radius: var(--border-radius-hard);}
 .border-radius-round {border-radius: var(--border-radius-round);}
 
+//gaps
+.gap-xxs {gap: var(--spacing-xs);}
+.gap-xs {gap: calc(var(--spacing-xs) + var(--spacing-xs));}
+.gap-s {gap: var(--spacing-s);}
+.gap-base {gap: var(--spacing-base);}
+.gap-m {gap: var(--spacing-m);}
+.gap-l {gap: var(--spacing-l);}
+.gap-xl {gap: var(--spacing-xl);}
+.gap-xxl {gap: var(--spacing-xxl);}
+
+//display
+.display-block {display: block;}
+.display-flex {display: flex;}
+.display-none {display: none;}
+
+//flex-direction
+.flex-direction-row {flex-direction: row;}
+.flex-direction-column {flex-direction: column;}
