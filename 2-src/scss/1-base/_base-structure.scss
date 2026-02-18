@@ -40,6 +40,19 @@
     --font-size-s: #{scss-functions.px-to-rem(14px)};
     --font-size-xs: #{scss-functions.px-to-rem(12px)};
     --font-size-label: #{scss-functions.px-to-rem(11px)};
+
+    //color-neutral
+    --color-neutral-0: #ffffff;
+    --color-neutral-1: #f8f9fa;
+    --color-neutral-2: #f1f3f5;
+    --color-neutral-3: #e9ecef;
+    --color-neutral-4: #dee2e6;
+    --color-neutral-5: #ced4da;
+    --color-neutral-6: #adb5bd;
+    --color-neutral-7: #6a7178;
+    --color-neutral-8: #4f575e;
+    --color-neutral-9: #272b30;
+    --color-neutral-10: #101213;
 }
 
 .highlight-styles,

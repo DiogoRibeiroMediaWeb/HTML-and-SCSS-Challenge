@@ -11,6 +11,7 @@
 
 <body>
   <div class="appLayout">
+    <div class="appLayout__overlay">
     <!---------------------------------------------------NavBar-------------------------------------------->
     <aside class="navbar">
       <!--TopMenu-->
@@ -62,10 +63,10 @@
           <div class="container__titles">
             <nav class="container__breadcrumb" aria-label="Breadcrumb">
               <a class="container__breadcrumb">Dashboard</a>
-              <span class="container__breadcrumbSep"><img src="1-dist/assets/angle-right.png" alt="" /></span>
+              <div class="container__breadcrumbSep"><img src="1-dist/assets/angle-right.png" alt="" /></div>
               <a class="container__breadcrumb">Components</a>
-              <span class="container__breadcrumbSep"><img src="1-dist/assets/angle-right.png" alt="" /></span>
-              <span class="container__breadcrumb">Detail page</span>
+              <div class="container__breadcrumbSep"><img src="1-dist/assets/angle-right.png" alt="" /></div>
+              <div class="container__breadcrumb">Detail page</div>
             </nav>
           </div>
         </div>
@@ -113,14 +114,14 @@
 
             <section class="card__section card__section--meta">
               <ul class="card__meta">
-                <li class="card__metaItem"> <img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li class="card__metaItem"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li class="card__metaItem"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                <li class="card__meta__item"><img src="1-dist/assets/envelope.png" alt="" />amos@mediaweb.pt</li>
+                <li class="card__meta__item"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                <li class="card__meta__item"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
               </ul>
             </section>
 
             <footer class="card__footer">
-              <a class="card__cta" href="#">View</a>
+              <button class="card__cta">View</button>
             </footer>
           </article>
 
@@ -146,14 +147,14 @@
 
             <section class="card__section card__section--meta">
               <ul class="card__meta">
-                <li class="card__metaItem"> <img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li class="card__metaItem"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li class="card__metaItem"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                <li class="card__meta__item"> <img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
+                <li class="card__meta__item"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                <li class="card__meta__item"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
               </ul>
             </section>
 
             <footer class="card__footer">
-              <a class="card__cta" href="#">View</a>
+              <button class="card__cta">View</button>
             </footer>
           </article>
 
@@ -179,14 +180,14 @@
 
             <section class="card__section card__section--meta">
               <ul class="card__meta">
-                <li class="card__metaItem"> <img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li class="card__metaItem"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li class="card__metaItem"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                <li class="card__meta__item"> <img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
+                <li class="card__meta__item"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                <li class="card__meta__item"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
               </ul>
             </section>
 
             <footer class="card__footer">
-              <a class="card__cta" href="#">View</a>
+              <button class="card__cta">View</button>
             </footer>
           </article>
 
@@ -212,22 +213,21 @@
 
             <section class="card__section card__section--meta">
               <ul class="card__meta">
-                <li class="card__metaItem"> <img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li class="card__metaItem"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li class="card__metaItem"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                <li class="card__meta__item"> <img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
+                <li class="card__meta__item"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                <li class="card__meta__item"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
               </ul>
             </section>
 
             <footer class="card__footer">
-              <a class="card__cta" href="#">View</a>
+              <button class="card__cta">View</button>
             </footer>
           </article>
 
         </section>
-
-
-
     </main>
+
+  </div>
 
     <!--------------------------------------------------NavMenu------------------------------------------->
     <aside class="navmenu">
@@ -294,43 +294,49 @@
             <div class="navmenu__calendarRow">
               <div class="navmenu__calendarItem">
                 <div class="navmenu__calendarDow">Mon</div>
+                <!--<div class="navmenu__calendarDot" aria-hidden="true"></div>-->
                 <div class="navmenu__calendarNum">9</div>
               </div>
 
               <div class="navmenu__calendarItem">
                 <div class="navmenu__calendarDow">Tues</div>
+                <!--<div class="navmenu__calendarDot" aria-hidden="true"></div>-->
                 <div class="navmenu__calendarNum">10</div>
               </div>
 
               <button class="navmenu__calendarItem navmenu__calendarItem--active" type="button" aria-current="date">
                 <div class="navmenu__calendarDow">Wed</div>
-                <!--<span class="navmenu__calendarDot" aria-hidden="true"></span>-->
+                <!--<div class="navmenu__calendarDot--active" aria-hidden="true"></div>-->
                 <div class="navmenu__calendarNum">11</div>
               </button>
 
               <div class="navmenu__calendarItem">
                 <div class="navmenu__calendarDow">Thu</div>
+                <!--<div class="navmenu__calendarDot" aria-hidden="true"></div>-->
                 <div class="navmenu__calendarNum">12</div>
               </div>
 
               <div class="navmenu__calendarItem">
                 <div class="navmenu__calendarDow">Fri</div>
-                <!--<span class="navmenu__calendarDot navmenu__calendarDot--blue" aria-hidden="true"></span>-->
+                <!--<div class="navmenu__calendarDot--active" aria-hidden="true"></div>-->
                 <div class="navmenu__calendarNum">13</div>
               </div>
 
               <div class="navmenu__calendarItem">
                 <div class="navmenu__calendarDow">Sat</div>
+                <!--<div class="navmenu__calendarDot" aria-hidden="true"></div>-->
                 <div class="navmenu__calendarNum">14</div>
               </div>
 
               <div class="navmenu__calendarItem">
                 <div class="navmenu__calendarDow">Sun</div>
+                <!--<div class="navmenu__calendarDot" aria-hidden="true"></div>-->
                 <div class="navmenu__calendarNum">15</div>
               </div>
 
               <div class="navmenu__calendarItem navmenu__calendarItem--disabled">
                 <div class="navmenu__calendarDow">Mon</div>
+                <!--<div class="navmenu__calendarDot" aria-hidden="true"></div>-->
                 <div class="navmenu__calendarNum">16</div>
               </div>
             </div>
@@ -339,7 +345,7 @@
           <div class="navmenu__cards">
 
             
-            <div class="navmenu__cardGroup"> <!--primeiro e segundi card-->
+            <div class="navmenu__cardGroup"> <!--primeiro e segundo card-->
               <!-- ================= PRIMARY CARD ================= -->
               <div class="navmenu__card navmenu__card--primary">
                 
@@ -359,11 +365,11 @@
                     <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=15" alt="">
                     <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=22" alt="">
                     <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=28" alt="">
-                    <span class="navmenu__avatarMore">+12</span>
+                    <div class="navmenu__avatarMore">+12</div>
                   </div>
 
                   <button class="navmenu__cardAction" type="button" aria-label="Open card">
-                    <span class="navmenu__cardActionIcon">›</span>
+                    <div class="navmenu__cardActionIcon">›</div>
                   </button>
 
                 </div>
@@ -393,10 +399,7 @@
                   </div>
 
                   <div class="navmenu__cardIcon" aria-hidden="true">
-                    <img src="1-dist/assets/chevron-right copy.png" alt="Health icon" />
-                    <span class="navmenu__cardIconGlyph">
                       <img src="1-dist/assets/caduceus.png" alt="Caduceus icon" />
-                    </span>
                   </div>
 
                 </div>
@@ -449,12 +452,15 @@
 </html>
 
 
-
+<!--
 coisas que tenho de fazer:
- - criar um conteiner que tenha a navbar e o container principal por causa da cor de fundo e colocar um border radius;
+ - criar um conteiner que tenha a navbar e o container principal por causa da cor de fundo e colocar um border radius;[✔️]
  - melhorar os textos, se calhar é melhor utilizar as usefull classes para os textos, para não ter de criar classes novas para cada tipo de texto;
- - melhorar o navmenu, as imagens dos cards é com position abslute, bottom 0 e right 0;
- - criar uma div só com o ultimo card e o texto dele porque o gap é menor
+ - melhorar o navmenu, as imagens dos cards é com position abslute, bottom 0 e right 0;[✔️]
+ - criar uma div só com o ultimo card e o texto dele porque o gap é menor- [✔️]
  - tem em atenção a altura das coisas
  - container principal ver a parte da pesquisa e das cores que tb está mal
- - botoões sempre criar hove, ative e focus.
+ - botões sempre criar hove, ative e focus.
+ - tenho de ver os dots e colocar estados active e disabled que é o default
+ - ver muti bem a navmenu porque é o que esta pior
+ -->
