@@ -824,8 +824,10 @@ h1, h2, h3, p {
 }
 .navmenu__calendarDow {
   font-weight: var(--font-weight-medium);
-  line-height: 1;
   font-size: var(--font-size-s);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navmenu__calendarNum {
   font-weight: var(--font-weight-bold);
@@ -918,14 +920,6 @@ h1, h2, h3, p {
   position: var(--position-relative);
   z-index: 1;
 }
-.navmenu__cardFooter {
-  margin-top: var(--spacing-s);
-  display: flex;
-  align-items: var(--align-items-center);
-  justify-content: var(--justify-content-space-between);
-  position: var(--position-relative);
-  z-index: 1;
-}
 .navmenu__avatars {
   display: flex;
   align-items: var(--align-items-center);
@@ -960,8 +954,11 @@ h1, h2, h3, p {
   width: 50px;
   border: 0;
   padding: 0;
-  border-radius: 16px 0 16px 0;
+  border-radius: 16px 0;
   background: var(--color-background-content);
+  position: absolute;
+  bottom: 0;
+  right: 0;
   display: flex;
   align-items: var(--align-items-center);
   justify-content: var(--justify-content-center);
@@ -1097,16 +1094,6 @@ h1, h2, h3, p {
   flex: 1;
   min-width: 0;
 }
-.card__name {
-  color: var(--color-text-main);
-  font-size: var(--font-size-m);
-  font-weight: var(--font-weight-medium);
-}
-.card__role {
-  color: var(--color-text-subtle);
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-regular);
-}
 .card__more {
   width: 24px;
   height: 24px;
@@ -1130,21 +1117,6 @@ h1, h2, h3, p {
   display: flex;
   flex-direction: var(--flex-direction-column);
   gap: var(--spacing-base);
-}
-.card__description {
-  color: var(--color-text-subtle);
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-regular);
-}
-.card__meta {
-  color: var(--color-text-subtle);
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-regular);
-}
-.card__meta__item {
-  display: flex;
-  align-items: var(--align-items-center);
-  justify-content: flex-start;
 }
 .card__footer {
   margin-top: auto;
@@ -2177,7 +2149,7 @@ h1, h2, h3, p {
 }
 
 .text-size-xs {
-  font-size: var(--font-size-xs);
+  --size: var(--font-size-xs);
 }
 
 .text-size-s {

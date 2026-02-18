@@ -322,7 +322,7 @@
 .margin-xxl {margin: var(--spacing-xxl);}
 
 //text-size
-.text-size-xs {font-size: var(--font-size-xs);}
+.text-size-xs {--size: var(--font-size-xs);}
 .text-size-s {font-size: var(--font-size-s);}
 .text-size-base {font-size: var(--font-size-base);}
 .text-size-m {font-size: var(--font-size-m);}
