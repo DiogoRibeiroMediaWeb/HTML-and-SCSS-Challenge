@@ -4,7 +4,7 @@
   align-items: var(--align-items-center);
   justify-content: var(--justify-content-center);
   cursor: pointer;
-  border: 1px transparent; // Border fina por padrão
+  border: 2px transparent; // Border fina por padrão
   // O que pediste especificamente:
   height: var(--control-height);       // Altura dinâmica
   border-radius: var(--border-radius-l); // Border radius (ajusta para o teu token)
@@ -17,12 +17,12 @@
   // Variante Principal (Primary) com Neutral 10
   &--primary {
     background-color: var(--color-primary); 
-    color: var(--color-neutral-10); // Texto claro sobre fundo escuro
+    color: var(--color-neutral-0); // Texto claro sobre fundo escuro
   }
 
   &--secondary {
     background-color: #fff;
-    border-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
     color: var(--color-primary);
   }
 

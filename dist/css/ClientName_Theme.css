@@ -1045,6 +1045,41 @@ h1, h2, h3, p {
 /* ==================================================================== */
 /*  Widgets > Button Group                                              */
 /*  Widgets > Table                                                     */
+/*  Widgets > Button                                                     */
+.btn {
+  display: flex;
+  align-items: var(--align-items-center);
+  justify-content: var(--justify-content-center);
+  cursor: pointer;
+  border: 2px transparent;
+  height: var(--control-height);
+  border-radius: var(--border-radius-l);
+}
+.btn:hover {
+  opacity: var(--opacity-hover);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+.btn:active {
+  opacity: var(--opacity-active);
+}
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-neutral-0);
+}
+.btn--secondary {
+  background-color: #fff;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+.btn--tertiary {
+  background-color: #E9ECEF;
+  color: rgba(0, 0, 17, 0.75);
+  border: none;
+}
+
 /* ==================================================================== */
 /*  $4 - Patterns                                                       */
 /* ==================================================================== */
