@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==================================================================== */
 /* ==================================================================== */
 /*  ClientName Theme - Based on OutSystems UI                           */
@@ -400,15 +401,59 @@ h1, h2, h3, p {
   margin: 0;
   padding: 0;
   background-color: var(--color-neutral-0);
+  overflow: hidden;
+  position: relative;
 }
-
+.appLayout .navbar-spacer {
+  width: 112px;
+  flex-shrink: 0;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.appLayout--menu-closed .navmenu {
+  width: 0;
+  min-width: 0;
+  padding: 0;
+  z-index: 1000;
+}
+.appLayout--menu-closed .navmenu .navmenu__submenu,
+.appLayout--menu-closed .navmenu .navmenu__info,
+.appLayout--menu-closed .navmenu .navmenu__profile {
+  display: none;
+}
+.appLayout--menu-closed .navmenu .navmenu__toggle {
+  left: -40px;
+  visibility: visible;
+  opacity: 1;
+}
+.appLayout--menu-closed .navmenu .navmenu__toggle img {
+  transform: rotate(180deg);
+}
+.appLayout .navbar-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 7, 17, 0.4);
+  z-index: 9000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+.appLayout--navbar-open .navbar-spacer {
+  width: 0;
+}
+.appLayout--navbar-open .navbar-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
 .appLayout__overlay {
   display: flex;
+  flex: 1;
+  min-width: 0;
   height: 100vh;
-  margin: 0;
-  padding: 0;
   background-color: #F2F9FF;
-  border-radius: 24px;
+  border-radius: 0 24px 24px 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
 }
 
 .container {
@@ -466,8 +511,6 @@ h1, h2, h3, p {
   align-items: var(--align-items-center);
   gap: var(--spacing-xs);
   flex-wrap: var(--flex-wrap-wrap);
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-regular);
 }
 .container__actions {
   display: flex;
@@ -575,6 +618,35 @@ h1, h2, h3, p {
   width: 112px;
   height: 100vh;
   border-radius: var(--border-radius-xl);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 9999;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.navbar--expanded {
+  width: 222px;
+  min-width: 222px;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.25);
+  z-index: 10000;
+}
+.navbar--expanded .navbar__label {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+.navbar--expanded .navbar__button, .navbar--expanded .navbar__button--active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 16px;
+  gap: 12px;
+  width: 100%;
 }
 .navbar__top {
   display: flex;
@@ -615,6 +687,17 @@ h1, h2, h3, p {
   gap: var(--spacing-xl);
   margin-top: var(--spacing-xl);
 }
+.navbar__label {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-s);
+  color: #E9ECEF;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  white-space: nowrap;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 .navbar__defbutton {
   margin-top: auto;
   display: flex;
@@ -650,11 +733,28 @@ h1, h2, h3, p {
   width: 390px;
   min-width: 390px;
   height: 100vh;
+  max-height: 100vh;
   position: var(--position-relative);
   display: flex;
   flex-direction: var(--flex-direction-column);
   background: var(--color-bg-page-layout-container);
   padding: var(--spacing-xl) var(--spacing-l);
+  flex-shrink: 0;
+  overflow-y: auto;
+  overflow-x: visible;
+  transition: width 0.4s ease, padding 0.4s ease;
+}
+.navmenu--collapsed {
+  width: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  overflow: visible;
+  /* Escondemos o conteúdo, mas NÃO o botão */
+}
+.navmenu--collapsed .navmenu__submenu,
+.navmenu--collapsed .navmenu__profile,
+.navmenu--collapsed .navmenu__info {
+  display: none !important;
 }
 .navmenu__toggle {
   display: flex;
@@ -668,6 +768,7 @@ h1, h2, h3, p {
   position: var(--position-absolute);
   left: -40px;
   top: 72px;
+  z-index: 10;
   border-radius: var(--border-radius-xxld);
   background: var(--neutral-color-0);
   border: 0;
@@ -680,7 +781,8 @@ h1, h2, h3, p {
   flex-direction: var(--flex-direction-column);
   gap: var(--spacing-m);
   width: 326px;
-  min-width: 0px;
+  min-width: 326px;
+  height: auto;
 }
 .navmenu__profile {
   display: flex;
@@ -712,7 +814,6 @@ h1, h2, h3, p {
 .navmenu__name {
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-bold);
-  line-height: 21px;
   width: 103px;
   min-width: 0px;
   height: 21px;
@@ -721,7 +822,6 @@ h1, h2, h3, p {
 .navmenu__subtitle {
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-xs);
-  line-height: 18px;
   width: 123.18px;
   min-width: 0px;
   height: 23px;
@@ -817,16 +917,33 @@ h1, h2, h3, p {
 }
 .navmenu__calendarItem {
   flex: 1;
-  min-width: 0;
   border: 0;
   background: transparent;
-  padding: 0;
+  padding: 16px 4px;
   display: flex;
   flex-direction: var(--flex-direction-column);
   align-items: var(--align-items-center);
   justify-content: var(--justify-content-center);
+  border-radius: 24px;
   gap: var(--spacing-xs);
   position: var(--position-relative);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.navmenu__calendarItem:hover:not(.navmenu__calendarItem--disabled):not(.navmenu__calendarItem--active) {
+  background-color: rgba(0, 17, 51, 0.05);
+}
+.navmenu__calendarItem--active {
+  background: var(--color-tertiary);
+  cursor: default;
+}
+.navmenu__calendarItem--active .navmenu__calendarDow,
+.navmenu__calendarItem--active .navmenu__calendarNum {
+  color: white;
+}
+.navmenu__calendarItem--disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
 }
 .navmenu__calendarDow {
   font-weight: var(--font-weight-medium);
@@ -837,14 +954,10 @@ h1, h2, h3, p {
 }
 .navmenu__calendarNum {
   font-weight: var(--font-weight-bold);
-  line-height: 1;
   font-size: var(--font-size-s);
 }
 .navmenu__calendarItem--active {
   background: var(--color-tertiary);
-  border-radius: 24px;
-  width: 43.54px;
-  height: 74px;
   cursor: pointer;
 }
 .navmenu__calendarItem--active .navmenu__calendarDow,
@@ -872,6 +985,8 @@ h1, h2, h3, p {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-m);
+  width: 100%;
+  height: auto;
 }
 .navmenu__cards {
   overflow: hidden;
@@ -892,29 +1007,26 @@ h1, h2, h3, p {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-s);
   align-items: var(--align-items-center);
-  line-height: 21px;
 }
 .navmenu__cardTitle--dark {
   color: var(--color-text-main);
 }
 .navmenu__cardMeta {
   margin: 0;
-  line-height: 1.3;
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-medium);
 }
 .navmenu__cardMeta--dark {
   color: var(--color-text-main);
-  opacity: 1;
   font-size: var(--font-size-s);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
 }
 .navmenu__card--primary {
   background: var(--color-tertiary);
   color: var(--color-background-content);
   padding: var(--spacing-base);
-  min-height: 0px;
   width: 326px;
+  height: 196px;
   position: relative;
 }
 .navmenu__cardHeader {
@@ -988,6 +1100,15 @@ h1, h2, h3, p {
   background: var(--color-quaternary);
   padding: var(--spacing-base);
   width: 327px;
+  height: 176px;
+}
+.navmenu__card--terceary {
+  background: var(--color-quaternary);
+  color: var(--color-background-content);
+  padding: var(--spacing-base);
+  height: 115px;
+  width: 326px;
+  position: relative;
 }
 .navmenu__cardContent {
   display: flex;
@@ -1077,8 +1198,8 @@ h1, h2, h3, p {
   flex-direction: var(--flex-direction-column);
   align-items: var(--align-items-start);
   flex: 1 1 48%;
-  min-width: 429px;
-  min-height: 0;
+  width: 429px;
+  height: 364px;
   padding: var(--spacing-m);
   gap: var(--spacing-m);
   border-radius: var(--border-radius-content);
@@ -1125,6 +1246,17 @@ h1, h2, h3, p {
   display: flex;
   flex-direction: var(--flex-direction-column);
   gap: var(--spacing-base);
+}
+.card .card__section--meta {
+  list-style: none;
+  padding: 0;
+}
+.card .card__section--meta li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-xs);
+  color: var(--color-neutral-6);
 }
 .card__footer {
   margin-top: auto;
@@ -2318,4 +2450,12 @@ h1, h2, h3, p {
 
 .h6 {
   font-size: var(--font-size-h6);
+}
+
+.flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap-wrap {
+  flex-wrap: wrap;
 }/*# sourceMappingURL=ClientName_Theme.css.map */

@@ -11,7 +11,7 @@
 
 <body>
   <div class="appLayout">
-    <div class="appLayout__overlay">
+    <div class="navbar-backdrop"></div>
     <!---------------------------------------------------NavBar-------------------------------------------->
     <aside class="navbar">
       <!--TopMenu-->
@@ -27,11 +27,15 @@
         <div class="navbar__buttons">
           <button class="navbar__button">
             <img src="1-dist/assets/Path 2.png" alt="Home" />
+            <div class="navbar__label">HomePage</div>
           </button>
           <button class="navbar__button">
             <img src="1-dist/assets/Frame 306.png " alt="Search" />
+            <div class="navbar__label">Statistics</div>
           </button>
-          <button class="navbar__button--active"><img src="1-dist/assets/like.png" /></button>
+          <button class="navbar__button--active"><img src="1-dist/assets/like.png" />
+            <div class="navbar__label">Favourites</div>
+          </button>
           <button class="navbar__button"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
               fill="transparent">
               <path
@@ -40,17 +44,23 @@
               <path
                 d="M24 35.5C29.5228 35.5 34 33.2614 34 30.5C34 27.7386 29.5228 25.5 24 25.5C18.4772 25.5 14 27.7386 14 30.5C14 33.2614 18.4772 35.5 24 35.5Z"
                 fill="white" />
-            </svg></button>
+            </svg>
+            <div class="navbar__label">Employess</div>
+          </button>
         </div>
         <!--Defmenu-->
         <div class="navbar__defbutton">
           <button class="navbar__button">
             <img src="1-dist/assets/Shape.png" alt="Settings" />
+            <div class="navbar__label">Preferences</div>
           </button>
         </div>
       </div>
     </aside>
+
+    <div class="navbar-spacer"></div>
     <!---------------------------------------------------Main--------------------------------------------->
+    <div class="appLayout__overlay">
     <main class="container">
 
       <!-- HEADER -->
@@ -58,15 +68,15 @@
         <div class="container__heading">  
           <div class="container__btn_h1">
             <button class="container__back" type="button"><img src="1-dist/assets/angle-left.png" alt="Back" /></button>
-            <h1 class="txt h1 font-weight-medium ">Detail page</h1>
+            <h1 class="txt h1 font-weight-medium text-primary">Detail page</h1>
           </div>
           <div class="container__titles">
             <nav class="container__breadcrumb" aria-label="Breadcrumb">
-              <a class="container__breadcrumb">Dashboard</a>
-              <div class="container__breadcrumbSep"><img src="1-dist/assets/angle-right.png" alt="" /></div>
-              <a class="container__breadcrumb">Components</a>
-              <div class="container__breadcrumbSep"><img src="1-dist/assets/angle-right.png" alt="" /></div>
-              <div class="container__breadcrumb">Detail page</div>
+              <a class="txt font-weight-regular font-size-s text-primary">Dashboard</a>
+              <div class=""><img src="1-dist/assets/angle-right.png" alt="" /></div>
+              <a class="txt font-weight-regular font-size-s text-primary">Components</a>
+              <div class=""><img src="1-dist/assets/angle-right.png" alt="" /></div>
+              <div class="txt font-weight-regular font-size-s">Detail page</div>
             </nav>
           </div>
         </div>
@@ -114,9 +124,9 @@
 
             <section class="card__section card__section--meta">
               <ul class="display-flex flex-direction-column">
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/envelope.png" alt="" />amos@mediaweb.pt</li>
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                <li><img src="1-dist/assets/envelope.png" alt="" />amos@mediaweb.pt</li>
+                <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
               </ul>
             </section>
 
@@ -147,9 +157,9 @@
 
             <section class="card__section card__section--meta">
               <ul class="display-flex flex-direction-column">
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                <li><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
+                <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
               </ul>
             </section>
 
@@ -180,9 +190,9 @@
 
             <section class="card__section card__section--meta">
               <ul class="display-flex flex-direction-column">
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                <li><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
+                <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
               </ul>
             </section>
 
@@ -213,9 +223,9 @@
 
             <section class="card__section card__section--meta">
               <ul class="display-flex flex-direction-column">
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li class="txt display-flex justify-content-start align-items-center text-neutral-6"><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                <li><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
+                <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
               </ul>
             </section>
 
@@ -234,7 +244,7 @@
       <button class="navmenu__toggle">
         <img src="1-dist/assets/chevron-right.png" alt="Close menu" />
       </button>
-      <div class="navmenu__submenu">
+        <div class="navmenu__submenu">
         <!--Profile-->
         <div class="navmenu__profile">
           <!--HeaderProfile-->
@@ -357,6 +367,7 @@
                   <p class="navmenu__cardMeta">9:00AM - 11:30AM</p>
                   <p class="navmenu__cardMeta">Coach : Nelson Hendricks</p>
                 </div>
+                  <div><img src="1-dist/assets/Line.png"></div>
                   <div class="navmenu__avatars">
                     <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=12" alt="">
                     <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=15" alt="">
@@ -364,7 +375,6 @@
                     <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=28" alt="">
                     <div class="navmenu__avatarMore">+12</div>
                   </div>
-
                   <div class="navmenu__cardIcon--primary"><img src = "1-dist/assets/medal.png"></div>
 
                   <button class="navmenu__cardAction" type="button" aria-label="Open card">
@@ -389,10 +399,13 @@
                     <p class="navmenu__cardMeta navmenu__cardMeta--dark">
                       Dr. Douglas Wade
                     </p>
-
-                    <button class="navmenu__cardLink" type="button">
+                    <div><img src="1-dist/assets/Line.png"></div>
+                    <div class="display-flex">
+                      <button class="navmenu__cardLink" type="button">
                       Follow-up
                     </button>
+                    </div>
+                    
                   </div>
 
                   <div class="navmenu__cardIcon" aria-hidden="true">
@@ -413,7 +426,7 @@
 
 
             <!-- ================= SECONDARY CARD ================= -->
-            <div class="navmenu__card navmenu__card--secondary">
+            <div class="navmenu__card navmenu__card--terceary">
 
               <div class="navmenu__cardContent">
 
@@ -444,6 +457,7 @@
       </div>
     </aside>
   </div>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

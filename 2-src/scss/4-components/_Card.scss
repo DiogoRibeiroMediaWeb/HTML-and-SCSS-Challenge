@@ -4,8 +4,8 @@
   align-items: var(--align-items-start);
 
   flex: 1 1 48%;
-  min-width: 429px;
-  min-height: 0;
+  width: 429px;
+  height: 364px;
 
   padding: var(--spacing-m);
   gap: var(--spacing-m);
@@ -64,6 +64,22 @@
     flex-direction: var(--flex-direction-column);
     gap: var(--spacing-base);
   }
+
+
+  .card__section--meta {
+  // Estilos para o container (opcional)
+  list-style: none;
+  padding: 0;
+
+  li {
+    // Escreve aqui o teu SCSS para os itens da lista
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacing-xs);
+    color: var(--color-neutral-6);
+  }
+}
   
   &__footer {
     margin-top: auto;
