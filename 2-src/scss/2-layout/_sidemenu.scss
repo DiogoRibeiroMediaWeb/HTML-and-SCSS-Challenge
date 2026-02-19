@@ -239,9 +239,9 @@
 
   &__calendarItem--active {
     background: var(--color-tertiary);
-    border-radius: var(--border-radius-pill);
-    padding-top: var(--spacing-base);
-    padding-bottom: var(--spacing-base);
+    border-radius: 24px;
+    width: 43.54px;
+    height: 74px;
     cursor: pointer;
     .navmenu__calendarDow,
     .navmenu__calendarNum {
@@ -259,12 +259,15 @@
     height: 6px;
     border-radius: var(--border-radius-pill);
     background: var(--color-background-content);
-    align-items: var(--align-items-end);
-  }
+    background-color: white;
 
-  &__calendarDot--blue {
-    background: var(--color-tertiary);
-    align-items: var(--align-items-end);
+    &--active {
+      background-color: white;
+    }
+
+    &--event {
+      background-color: blue;
+    }
   }
 
   ///////////////////////////////////////////cards do calendario/////////////////////////////////////////////////////
@@ -320,10 +323,10 @@
   &__card--primary {
     background: var(--color-tertiary);
     color: var(--color-background-content);
-
     padding: var(--spacing-base);
     min-height: 0px;
     width: 326px;
+    position: relative;
   }
 
   &__cardHeader {
@@ -434,14 +437,14 @@
   }
 
   &__cardIcon {
-    width: 80px;
-    flex: 0 0 80px;
-    display: flex;
-    align-items: var(--align-items-center);
-    justify-content: var(--justify-content-center);
-    opacity: var(--opacity-disabled);
     position: absolute;
     bottom: 0;
+    right: 0;
+  }
+
+  &__cardIcon--primary {
+    position: absolute;
+    top: 0;
     right: 0;
   }
 

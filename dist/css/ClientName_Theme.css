@@ -441,11 +441,6 @@ h1, h2, h3, p {
   width: 40px;
   height: 40px;
 }
-.container__title {
-  font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-primary);
-}
 .container__btn_h1 {
   display: flex;
   align-items: center;
@@ -836,9 +831,9 @@ h1, h2, h3, p {
 }
 .navmenu__calendarItem--active {
   background: var(--color-tertiary);
-  border-radius: var(--border-radius-pill);
-  padding-top: var(--spacing-base);
-  padding-bottom: var(--spacing-base);
+  border-radius: 24px;
+  width: 43.54px;
+  height: 74px;
   cursor: pointer;
 }
 .navmenu__calendarItem--active .navmenu__calendarDow,
@@ -854,11 +849,13 @@ h1, h2, h3, p {
   height: 6px;
   border-radius: var(--border-radius-pill);
   background: var(--color-background-content);
-  align-items: var(--align-items-end);
+  background-color: white;
 }
-.navmenu__calendarDot--blue {
-  background: var(--color-tertiary);
-  align-items: var(--align-items-end);
+.navmenu__calendarDot--active {
+  background-color: white;
+}
+.navmenu__calendarDot--event {
+  background-color: blue;
 }
 .navmenu__cardGroup {
   display: flex;
@@ -907,6 +904,7 @@ h1, h2, h3, p {
   padding: var(--spacing-base);
   min-height: 0px;
   width: 326px;
+  position: relative;
 }
 .navmenu__cardHeader {
   margin-bottom: var(--spacing-xs);
@@ -1002,14 +1000,13 @@ h1, h2, h3, p {
   font-size: var(--font-size-s);
 }
 .navmenu__cardIcon {
-  width: 80px;
-  flex: 0 0 80px;
-  display: flex;
-  align-items: var(--align-items-center);
-  justify-content: var(--justify-content-center);
-  opacity: var(--opacity-disabled);
   position: absolute;
   bottom: 0;
+  right: 0;
+}
+.navmenu__cardIcon--primary {
+  position: absolute;
+  top: 0;
   right: 0;
 }
 .navmenu__cardIconGlyph {
@@ -2286,4 +2283,28 @@ h1, h2, h3, p {
 
 .flex-direction-column {
   flex-direction: column;
+}
+
+.h1 {
+  font-size: var(--font-size-h1);
+}
+
+.h2 {
+  font-size: var(--font-size-h2);
+}
+
+.h3 {
+  font-size: var(--font-size-h3);
+}
+
+.h4 {
+  font-size: var(--font-size-h4);
+}
+
+.h5 {
+  font-size: var(--font-size-h5);
+}
+
+.h6 {
+  font-size: var(--font-size-h6);
 }/*# sourceMappingURL=ClientName_Theme.css.map */
