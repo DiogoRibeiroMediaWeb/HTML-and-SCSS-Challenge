@@ -115,6 +115,17 @@
   --color-background-subtle: #b4b4b4;
   --color-background-opacity-soft: rgba(0, 0, 0, 0.12);
   --color-background-opacity-subtle: rgba(0, 0, 0, 0.06);
+  --neutral-color-0: #FFFFFF;
+  --neutral-color-1: #F1F3F5;
+  --neutral-color-2: #E1E5EA;
+  --neutral-color-3: #C1C8CD;
+  --neutral-color-4: #A1ACB5;
+  --neutral-color-5: #818E9D;
+  --neutral-color-6: #61677E;
+  --neutral-color-7: #414141;
+  --neutral-color-8: #212121;
+  --neutral-color-9: #101213;
+  --neutral-color-10: #000000;
   /* text */
   --color-text-main: #272b30;
   --color-text-on-contrast: #000000;
@@ -658,7 +669,7 @@ h1, h2, h3, p {
   left: -40px;
   top: 72px;
   border-radius: var(--border-radius-xxld);
-  background: var(--color-bg-page-layout-container);
+  background: var(--neutral-color-0);
   border: 0;
   -webkit-appearance: none;
      -moz-appearance: none;
