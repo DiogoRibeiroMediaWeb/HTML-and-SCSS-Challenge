@@ -406,7 +406,6 @@ h1, h2, h3, p {
 .appLayout .navbar-spacer {
   width: 112px;
   flex-shrink: 0;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .appLayout--menu-closed .navmenu {
   width: 0;
@@ -436,12 +435,13 @@ h1, h2, h3, p {
   visibility: hidden;
   transition: all 0.4s ease;
 }
-.appLayout--navbar-open .navbar-spacer {
-  width: 0;
-}
 .appLayout--navbar-open .navbar-backdrop {
   opacity: 1;
   visibility: visible;
+}
+.appLayout--navbar-open .navbar {
+  width: 222px;
+  z-index: 10000;
 }
 .appLayout__overlay {
   display: flex;
@@ -732,16 +732,12 @@ h1, h2, h3, p {
   width: 390px;
   min-width: 390px;
   height: 100vh;
-  max-height: 100vh;
   position: var(--position-relative);
   display: flex;
   flex-direction: var(--flex-direction-column);
   background: var(--color-bg-page-layout-container);
-  padding: var(--spacing-xl) var(--spacing-l);
-  flex-shrink: 0;
-  overflow-y: auto;
-  overflow-x: visible;
   transition: width 0.4s ease, padding 0.4s ease;
+  overflow: visible;
 }
 .navmenu--collapsed {
   width: 0 !important;
@@ -753,7 +749,9 @@ h1, h2, h3, p {
 .navmenu--collapsed .navmenu__submenu,
 .navmenu--collapsed .navmenu__profile,
 .navmenu--collapsed .navmenu__info {
-  display: none !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
 }
 .navmenu__toggle {
   display: flex;
@@ -776,12 +774,11 @@ h1, h2, h3, p {
           appearance: none;
 }
 .navmenu__submenu {
-  display: flex;
-  flex-direction: var(--flex-direction-column);
-  gap: var(--spacing-m);
-  width: 326px;
-  min-width: 326px;
-  height: auto;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--spacing-xl) var(--spacing-l);
 }
 .navmenu__profile {
   display: flex;
@@ -891,15 +888,6 @@ h1, h2, h3, p {
   flex-direction: var(--flex-direction-column);
   gap: var(--spacing-base);
 }
-.navmenu__calendarHeader {
-  display: flex;
-  align-items: var(--align-items-center);
-  gap: var(--spacing-s);
-}
-.navmenu__calendarMonth {
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-s);
-}
 .navmenu__calendarMonthBtn {
   border: 0;
   background: transparent;
@@ -908,11 +896,6 @@ h1, h2, h3, p {
   align-items: var(--align-items-center);
   justify-content: var(--justify-content-center);
   cursor: pointer;
-}
-.navmenu__calendarRow {
-  display: flex;
-  justify-content: var(--justify-content-space-between);
-  gap: var(--spacing-s);
 }
 .navmenu__calendarItem {
   flex: 1;

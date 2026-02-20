@@ -10,7 +10,6 @@
   .navbar-spacer {
     width: 112px; // Largura da barra fechada
     flex-shrink: 0;
-    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &--menu-closed {
@@ -45,12 +44,13 @@
 
 
   &--navbar-open {
-    .navbar-spacer {
-      width: 0;
-    }
     .navbar-backdrop {
       opacity: 1;
       visibility: visible;
+    }
+    .navbar {
+      width: 222px; // A navbar expande-se para além dos 112px do spacer
+      z-index: 10000; // Garante que flutua sobre o container
     }
   }
 
