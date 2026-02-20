@@ -1,10 +1,10 @@
 .navbar {
-  display: flex; //sem valor absoluto
-  flex-direction: var(--flex-direction-column); //sem valor absoluto
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-primary);
   width: 112px;
   height: 100vh;
-  border-radius: 0px 24px 24px 0px;
+  border-radius: 0 24px 24px 0;
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 9999;
   overflow: hidden;
@@ -12,7 +12,6 @@
   left: 0;
   top: 0;
   bottom: 0;
-
   .appLayout--navbar-open & {
     width: 222px;
     min-width: 222px;
@@ -39,25 +38,19 @@
       transform: rotate(180deg);
     }
 
-    // Alinhamento horizontal para o texto ficar à frente da imagem
     .navbar__button, .navbar__button--active {
-      display: flex;
-      flex-direction: row; 
-      align-items: center;
+      width: 180px;
       justify-content: flex-start;
       padding-left: 16px;
       gap: 12px;
-      width: 180px; // Largura fixa para os botões não "dançarem"
-      margin: 0 auto; // Centraliza o bloco do botão na barra larga
+      margin: 0 auto;
     }
   }
 
-  
-
   &__top {
-    display: flex; //sem valor absoluto
-    justify-content: var(--justify-content-space-between); //sem valor absoluto
-    align-items: var(--align-items-center); //sem valor absoluto
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: var(--spacing-base);
   }
 
@@ -69,8 +62,6 @@
     &--expanded {
       height: 30px;
       flex-shrink: 0;
-      
-      // Estado Inicial (Escondido igual à label)
       opacity: 0;
       visibility: hidden;
       max-width: 0;
@@ -82,81 +73,67 @@
   &__toggle {
     width: 24px;
     height: 24px;
-    border: none; //sem valor absoluto
-    background: transparent; //sem valor absoluto
-    color: #E9ECEF; //var(--color-text-primary);
+    border: none;
+    background: transparent;
     cursor: pointer;
+    transition: opacity 0.2s;
 
-    &:hover {
-      opacity: var(--opacity-hover);
-    }
-
-    &:active {
-      opacity: var(--opacity-active);
-    }
+    &:hover { opacity: var(--opacity-hover); }
+    &:active { opacity: var(--opacity-active); }
   }
 
   &__menu {
     flex: 1;
-    display: flex; //sem valor absoluto
+    display: flex;
+    flex-direction: column;
     border-radius: var(--border-radius-xl);
-    flex-direction: var(--flex-direction-column); //sem valor absoluto
   }
 
   &__buttons {
-    display: flex; //sem valor absoluto
-    flex-direction: var(--flex-direction-column); //sem valor absoluto
-    align-items: var(--align-items-center); //sem valor absoluto
-    flex: 1; //sem valor absoluto
-    gap: var(--spacing-xl); //sem valor absoluto
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: var(--spacing-xl);
     margin-top: var(--spacing-xl);
   }
 
   &__label {
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-s);
-    color: #E9ECEF; //var(--color-text-primary);
-
+    color: #E9ECEF;
     opacity: 0;
     visibility: hidden;
     position: absolute;
-
-    white-space: nowrap; // Impede que o texto quebre linha
-    transform: translateX(-15px); // Pequeno deslize para a animação
+    white-space: nowrap;
+    transform: translateX(-15px);
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   &__defbutton {
-    margin-top: auto; //sem valor absoluto
-    display: flex; //sem valor absoluto
-    justify-content: var(--justify-content-center); //sem valor absoluto
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
     padding-bottom: var(--spacing-l);
   }
 
-  &__button {
+  &__button, &__button--active {
     background: transparent;
     border: 0;
     padding: 0;
-    margin: 0;
-    line-height: 0;
     width: 48px;
     height: 48px;
     border-radius: 11px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 
-    &--active {
-      background-color: #00113333;
-      border: 0;
-      padding: 0;
-      margin: 0;
-      line-height: 0;
-      width: 48px;
-      height: 48px;
-      border-radius: 11px;
-    }
+    &:hover { background-color: rgba(0, 17, 51, 0.2); }
+  }
 
-    &:hover {
-      background-color: #00113333;
-    }
+  &__button--active {
+    background-color: rgba(0, 17, 51, 0.2);
   }
 }
