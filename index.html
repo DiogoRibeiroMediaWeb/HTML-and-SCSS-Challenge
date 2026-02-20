@@ -61,189 +61,194 @@
     <div class="navbar-spacer"></div>
     <!---------------------------------------------------Main--------------------------------------------->
     <div class="appLayout__overlay">
-    <main class="container">
+      <main class="container">
 
-      <!-- HEADER -->
-      <header class="container__header">
-        <div class="container__heading">  
-          <div class="container__btn_h1">
-            <button class="container__back" type="button"><img src="1-dist/assets/angle-left.png" alt="Back" /></button>
-            <h1 class="txt h1 font-weight-medium text-primary">Detail page</h1>
+        <!-- HEADER -->
+        <header class="container__header">
+          <div class="container__heading">
+            <div class="container__btn_h1">
+              <button class="container__back" type="button"><img src="1-dist/assets/angle-left.png"
+                  alt="Back" /></button>
+              <h1 class="txt h1 font-weight-medium text-primary">Detail page</h1>
+            </div>
+            <div class="container__titles">
+              <nav class="container__breadcrumb" aria-label="Breadcrumb">
+                <a class="txt font-weight-regular font-size-s text-primary">Dashboard</a>
+                <div class=""><img src="1-dist/assets/angle-right.png" alt="" /></div>
+                <a class="txt font-weight-regular font-size-s text-primary">Components</a>
+                <div class=""><img src="1-dist/assets/angle-right.png" alt="" /></div>
+                <div class="txt font-weight-regular font-size-s">Detail page</div>
+              </nav>
+            </div>
           </div>
-          <div class="container__titles">
-            <nav class="container__breadcrumb" aria-label="Breadcrumb">
-              <a class="txt font-weight-regular font-size-s text-primary">Dashboard</a>
-              <div class=""><img src="1-dist/assets/angle-right.png" alt="" /></div>
-              <a class="txt font-weight-regular font-size-s text-primary">Components</a>
-              <div class=""><img src="1-dist/assets/angle-right.png" alt="" /></div>
-              <div class="txt font-weight-regular font-size-s">Detail page</div>
-            </nav>
+
+          <div class="container__actions">
+            <button class="btn btn--secondary" type="button">Secondary Action</button>
+            <button class="btn btn--primary" type="button">Primary Action</button>
           </div>
-        </div>
+        </header>
 
-        <div class="container__actions">
-          <button class="btn btn--secondary" type="button">Secondary Action</button>
-          <button class="btn btn--primary" type="button">Primary Action</button>
-        </div>
-      </header>
-
-      <!-- SEARCH + FILTERS -->
-      <section class="container__searchRow">
-        <div class="container__search">
-          <img class="container__searchIcon" src="1-dist/assets/search.png" alt="Search icon" />
-          <input class="container__searchInput" type="text"
-            placeholder="Search for athlete profile data, workout and meditation sessions" />
-        </div>
-
-        <button class="btn btn--tertiary" type="button">Advanced Filters</button>
-      </section>
-
-      <!-- CARDS-->
-      <section class="container__cards">
-        <section class="container__cards">
-
-          <!-- CARD 1 -->
-          <article class="card">
-            <header class="card__header">
-              <img class="card__avatar" src="1-dist/assets/User Image - Rounded.png" alt="Amos Tesen" />
-
-              <div class="card__heading">
-                <h3 class="txt text-size-m font-weight-medium text-neutral-9">Amos Tesen</h3>
-                <p class="txt text-size-s font-weight-regular text-neutral-6">Head of Development</p>
+        <!-- SEARCH + FILTERS -->
+        <section class="container__searchRow">
+            <div class="display-flex flex-direction-column gap-s">
+              <div class="display-flex align-items-center">
+                <img class="container__searchIcon" src="1-dist/assets/search.png" alt="Search icon" />
+                <input class="container__searchInput" type="text"
+                  placeholder="Search for athlete profile data, workout and meditation sessions" />
               </div>
+            <img src="1-dist/assets/Path copy.png" alt="">
+            </div>
+          
 
-              <button class="card__more" type="button" aria-label="More options"><img src="1-dist/assets/ellipsis-h.png"
-                  alt="" /></button>
-            </header>
-
-            <section class="card__section card__section--summary">
-              <p class="txt text-size-s font-weight-regular text-neutral-7">
-                I distinguish three main text objectives could be merely to inform people.
-              </p>
-            </section>
-
-            <section class="card__section card__section--meta">
-              <ul>
-                <li><img src="1-dist/assets/envelope.png" alt="" />amos@mediaweb.pt</li>
-                <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
-              </ul>
-            </section>
-
-            <footer class="card__footer">
-              <button class="card__cta">View</button>
-            </footer>
-          </article>
-
-          <!-- CARD 2 -->
-          <article class="card">
-            <header class="card__header">
-              <img class="card__avatar" src="1-dist/assets/Ann_Olivarria.png" alt="Ann Olivarria" />
-
-              <div class="card__heading">
-                <h3 class="txt text-size-m font-weight-medium text-neutral-9">Ann Olivarria</h3>
-                <p class="txt text-size-s font-weight-regular text-neutral-6">Head of Development</p>
-              </div>
-
-              <button class="card__more" type="button" aria-label="More options"><img src="1-dist/assets/ellipsis-h.png"
-                  alt="" /></button>
-            </header>
-
-            <section class="card__section card__section--summary">
-              <p class="txt text-size-s font-weight-regular text-neutral-7">
-                I distinguish three main text objectives could be merely to inform people.
-              </p>
-            </section>
-
-            <section class="card__section card__section--meta">
-              <ul>
-                <li><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
-              </ul>
-            </section>
-
-            <footer class="card__footer">
-              <button class="card__cta">View</button>
-            </footer>
-          </article>
-
-          <!-- CARD 3 -->
-          <article class="card">
-            <header class="card__header">
-              <img class="card__avatar" src="1-dist/assets/User Image - Rounded.png" alt="Darlene Shockley" />
-
-              <div class="card__heading">
-                <h3 class="txt text-size-m font-weight-medium text-neutral-9">Darlene Shockley</h3>
-                <p class="txt text-size-s font-weight-regular text-neutral-6">Head of Development</p>
-              </div>
-
-              <button class="card__more" type="button" aria-label="More options"><img src="1-dist/assets/ellipsis-h.png"
-                  alt="" /></button>
-            </header>
-
-            <section class="card__section card__section--summary">
-              <p class="txt text-size-s font-weight-regular text-neutral-7">
-                I distinguish three main text objectives could be merely to inform people.
-              </p>
-            </section>
-
-            <section class="card__section card__section--meta">
-              <ul>
-                <li><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
-              </ul>
-            </section>
-
-            <footer class="card__footer">
-              <button class="card__cta">View</button>
-            </footer>
-          </article>
-
-          <!-- CARD 4 -->
-          <article class="card">
-            <header class="card__header">
-              <img class="card__avatar" src="1-dist/assets/David Smith.png" alt="David Smith" />
-
-              <div class="card__heading">
-                <h3 class="txt text-size-m font-weight-medium text-neutral-9">David Smith</h3>
-                <p class="txt text-size-s font-weight-regular text-neutral-6">Head of Development</p>
-              </div>
-
-              <button class="card__more" type="button" aria-label="More options"><img src="1-dist/assets/ellipsis-h.png"
-                  alt="" /></button>
-            </header>
-
-            <section class="card__section card__section--summary">
-              <p class="txt text-size-s font-weight-regular text-neutral-7">
-                I distinguish three main text objectives could be merely to inform people.
-              </p>
-            </section>
-
-            <section class="card__section card__section--meta">
-              <ul>
-                <li><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
-                <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
-                <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
-              </ul>
-            </section>
-
-            <footer class="card__footer">
-              <button class="card__cta">View</button>
-            </footer>
-          </article>
+          <button class="btn btn--tertiary" type="button">Advanced Filters</button>
         </section>
-    </main>
 
-  </div>
+        <!-- CARDS-->
+        <section class="container__cards">
+          <section class="container__cards">
+
+            <!-- CARD 1 -->
+            <article class="card">
+              <header class="card__header">
+                <img class="card__avatar" src="1-dist/assets/User Image - Rounded.png" alt="Amos Tesen" />
+
+                <div class="card__heading">
+                  <h3 class="txt text-size-m font-weight-medium text-neutral-9">Amos Tesen</h3>
+                  <p class="txt text-size-s font-weight-regular text-neutral-6">Head of Development</p>
+                </div>
+
+                <button class="card__more" type="button" aria-label="More options"><img
+                    src="1-dist/assets/ellipsis-h.png" alt="" /></button>
+              </header>
+
+              <section class="card__section card__section--summary">
+                <p class="txt text-size-s font-weight-regular text-neutral-7">
+                  I distinguish three main text objectives could be merely to inform people.
+                </p>
+              </section>
+
+              <section class="card__section card__section--meta">
+                <ul>
+                  <li><img src="1-dist/assets/envelope.png" alt="" />amos@mediaweb.pt</li>
+                  <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                  <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                </ul>
+              </section>
+
+              <footer class="card__footer">
+                <button class="card__cta">View</button>
+              </footer>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="card">
+              <header class="card__header">
+                <img class="card__avatar" src="1-dist/assets/Ann_Olivarria.png" alt="Ann Olivarria" />
+
+                <div class="card__heading">
+                  <h3 class="txt text-size-m font-weight-medium text-neutral-9">Ann Olivarria</h3>
+                  <p class="txt text-size-s font-weight-regular text-neutral-6">Head of Development</p>
+                </div>
+
+                <button class="card__more" type="button" aria-label="More options"><img
+                    src="1-dist/assets/ellipsis-h.png" alt="" /></button>
+              </header>
+
+              <section class="card__section card__section--summary">
+                <p class="txt text-size-s font-weight-regular text-neutral-7">
+                  I distinguish three main text objectives could be merely to inform people.
+                </p>
+              </section>
+
+              <section class="card__section card__section--meta">
+                <ul>
+                  <li><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
+                  <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                  <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                </ul>
+              </section>
+
+              <footer class="card__footer">
+                <button class="card__cta">View</button>
+              </footer>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="card">
+              <header class="card__header">
+                <img class="card__avatar" src="1-dist/assets/User Image - Rounded.png" alt="Darlene Shockley" />
+
+                <div class="card__heading">
+                  <h3 class="txt text-size-m font-weight-medium text-neutral-9">Darlene Shockley</h3>
+                  <p class="txt text-size-s font-weight-regular text-neutral-6">Head of Development</p>
+                </div>
+
+                <button class="card__more" type="button" aria-label="More options"><img
+                    src="1-dist/assets/ellipsis-h.png" alt="" /></button>
+              </header>
+
+              <section class="card__section card__section--summary">
+                <p class="txt text-size-s font-weight-regular text-neutral-7">
+                  I distinguish three main text objectives could be merely to inform people.
+                </p>
+              </section>
+
+              <section class="card__section card__section--meta">
+                <ul>
+                  <li><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
+                  <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                  <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                </ul>
+              </section>
+
+              <footer class="card__footer">
+                <button class="card__cta">View</button>
+              </footer>
+            </article>
+
+            <!-- CARD 4 -->
+            <article class="card">
+              <header class="card__header">
+                <img class="card__avatar" src="1-dist/assets/David Smith.png" alt="David Smith" />
+
+                <div class="card__heading">
+                  <h3 class="txt text-size-m font-weight-medium text-neutral-9">David Smith</h3>
+                  <p class="txt text-size-s font-weight-regular text-neutral-6">Head of Development</p>
+                </div>
+
+                <button class="card__more" type="button" aria-label="More options"><img
+                    src="1-dist/assets/ellipsis-h.png" alt="" /></button>
+              </header>
+
+              <section class="card__section card__section--summary">
+                <p class="txt text-size-s font-weight-regular text-neutral-7">
+                  I distinguish three main text objectives could be merely to inform people.
+                </p>
+              </section>
+
+              <section class="card__section card__section--meta">
+                <ul>
+                  <li><img src="1-dist/assets/envelope.png" alt="" /> amos@mediaweb.pt</li>
+                  <li><img src="1-dist/assets/suitcase.png" alt="" /> Manager</li>
+                  <li><img src="1-dist/assets/location-arrow.png" alt="" />@mediaweb.pt</li>
+                </ul>
+              </section>
+
+              <footer class="card__footer">
+                <button class="card__cta">View</button>
+              </footer>
+            </article>
+          </section>
+      </main>
+
+    </div>
 
     <!--------------------------------------------------NavMenu------------------------------------------->
     <aside class="navmenu">
       <button class="navmenu__toggle">
         <img src="1-dist/assets/chevron-right.png" alt="Close menu" />
       </button>
-        <div class="navmenu__submenu">
+      <div class="navmenu__submenu">
         <!--Profile-->
         <div class="navmenu__profile">
           <!--HeaderProfile-->
@@ -353,11 +358,11 @@
 
           <div class="navmenu__cards">
 
-            
+
             <div class="navmenu__cardGroup"> <!--primeiro e segundo card-->
               <!-- ================= PRIMARY CARD ================= -->
               <div class="navmenu__card navmenu__card--primary">
-                
+
                 <div class="navmenu__cardHeader">
                   <h3 class="navmenu__cardTitle">Match against Team B</h3>
                 </div>
@@ -366,19 +371,19 @@
                   <p class="navmenu__cardMeta">9:00AM - 11:30AM</p>
                   <p class="navmenu__cardMeta">Coach : Nelson Hendricks</p>
                 </div>
-                  <div style = "display: flex; margin: var(--spacing-m);"><img src="1-dist/assets/Line.png"></div>
-                  <div class="navmenu__avatars">
-                    <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=12" alt="">
-                    <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=15" alt="">
-                    <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=22" alt="">
-                    <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=28" alt="">
-                    <div class="navmenu__avatarMore">+12</div>
-                  </div>
-                  <div class="navmenu__cardIcon--primary"><img src = "1-dist/assets/medal.png"></div>
+                <div style="display: flex; margin: var(--spacing-m);"><img src="1-dist/assets/Line.png"></div>
+                <div class="navmenu__avatars">
+                  <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=12" alt="">
+                  <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=15" alt="">
+                  <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=22" alt="">
+                  <img class="navmenu__avatar" src="https://i.pravatar.cc/40?img=28" alt="">
+                  <div class="navmenu__avatarMore">+12</div>
+                </div>
+                <div class="navmenu__cardIcon--primary"><img src="1-dist/assets/medal.png"></div>
 
-                  <button class="navmenu__cardAction" type="button" aria-label="Open card">
-                    <div class="navmenu__cardActionIcon">›</div>
-                  </button>
+                <button class="navmenu__cardAction" type="button" aria-label="Open card">
+                  <div class="navmenu__cardActionIcon">›</div>
+                </button>
               </div>
 
               <!-- ================= SECONDARY CARD ================= -->
@@ -401,14 +406,14 @@
                     <div><img src="1-dist/assets/Line.png"></div>
                     <div class="navmenu__follow">
                       <button class="navmenu__cardLink" type="button">
-                      Follow-up
-                    </button>
+                        Follow-up
+                      </button>
                     </div>
-                    
+
                   </div>
 
                   <div class="navmenu__cardIcon" aria-hidden="true">
-                      <img src="1-dist/assets/caduceus.png" alt="Caduceus icon" />
+                    <img src="1-dist/assets/caduceus.png" alt="Caduceus icon" />
                   </div>
 
                 </div>
@@ -416,38 +421,38 @@
               </div>
             </div>
 
-            
+
             <div class="display-flex gap-xs flex-direction-column"> <!--terceiro e quarto card-->
               <!-- ================= SECTION TITLE ================= -->
-            <div class="navmenu__sectionTitle">
-              Post workout sessions
-            </div>
+              <div class="navmenu__sectionTitle">
+                Post workout sessions
+              </div>
 
 
-            <!-- ================= SECONDARY CARD ================= -->
-            <div class="navmenu__card navmenu__card--terceary">
+              <!-- ================= SECONDARY CARD ================= -->
+              <div class="navmenu__card navmenu__card--terceary">
 
-              <div class="navmenu__cardContent">
-                <h3 class="navmenu__cardTitle navmenu__cardTitle--dark">
+                <div class="navmenu__cardContent">
+                  <h3 class="navmenu__cardTitle navmenu__cardTitle--dark">
                     Meditation
                   </h3>
-                <div class="navmenu__cardText">
-                  <p class="navmenu__cardMeta navmenu__cardMeta--dark">
-                    5:00PM - 6:00PM
-                  </p>
+                  <div class="navmenu__cardText">
+                    <p class="navmenu__cardMeta navmenu__cardMeta--dark">
+                      5:00PM - 6:00PM
+                    </p>
 
-                  <p class="navmenu__cardMeta navmenu__cardMeta--dark">
-                    Coach : Tim Bjorvick
-                  </p>
-                </div>
+                    <p class="navmenu__cardMeta navmenu__cardMeta--dark">
+                      Coach : Tim Bjorvick
+                    </p>
+                  </div>
 
-                <div class="navmenu__cardIcon" aria-hidden="true">
-                  <img src="1-dist/assets/lotus.png" alt="Lotus icon" />
+                  <div class="navmenu__cardIcon" aria-hidden="true">
+                    <img src="1-dist/assets/lotus.png" alt="Lotus icon" />
+                  </div>
+
                 </div>
 
               </div>
-
-            </div>
             </div>
           </div>
         </div>
