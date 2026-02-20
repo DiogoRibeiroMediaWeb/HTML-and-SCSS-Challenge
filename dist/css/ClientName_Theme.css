@@ -2303,7 +2303,7 @@ h1, h2, h3, p {
 }
 
 .text-size-xs {
-  --size: var(--font-size-xs);
+  font-size: var(--font-size-xs);
 }
 
 .text-size-s {
