@@ -640,6 +640,16 @@ h1, h2, h3, p {
   transform: translateX(0);
   transition-delay: 0.15s;
 }
+.appLayout--navbar-open .navbar .navbar__logo--expanded {
+  opacity: 1;
+  visibility: visible;
+  max-width: 80px;
+  min-width: 80px;
+  margin-left: 12px;
+}
+.appLayout--navbar-open .navbar .navbar__toggle img {
+  transform: rotate(180deg);
+}
 .appLayout--navbar-open .navbar .navbar__button, .appLayout--navbar-open .navbar .navbar__button--active {
   display: flex;
   flex-direction: row;
@@ -660,6 +670,15 @@ h1, h2, h3, p {
   width: 36px;
   height: 30px;
   cursor: pointer;
+}
+.navbar__logo--expanded {
+  height: 30px;
+  flex-shrink: 0;
+  opacity: 0;
+  visibility: hidden;
+  max-width: 0;
+  margin-left: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navbar__toggle {
   width: 24px;

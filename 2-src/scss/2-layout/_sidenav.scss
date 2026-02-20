@@ -27,6 +27,18 @@
       transition-delay: 0.15s;
     }
 
+    .navbar__logo--expanded {
+      opacity: 1;
+      visibility: visible;
+      max-width: 80px;
+      min-width: 80px;
+      margin-left: 12px;
+    }
+
+    .navbar__toggle img {
+      transform: rotate(180deg);
+    }
+
     // Alinhamento horizontal para o texto ficar à frente da imagem
     .navbar__button, .navbar__button--active {
       display: flex;
@@ -53,6 +65,18 @@
     width: 36px;
     height: 30px;
     cursor: pointer;
+
+    &--expanded {
+      height: 30px;
+      flex-shrink: 0;
+      
+      // Estado Inicial (Escondido igual à label)
+      opacity: 0;
+      visibility: hidden;
+      max-width: 0;
+      margin-left: 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 
   &__toggle {
