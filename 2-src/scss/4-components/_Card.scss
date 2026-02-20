@@ -67,18 +67,18 @@
 
 
   .card__section--meta {
-  // Estilos para o container (opcional)
-  list-style: none;
-  padding: 0;
-
+  ul{
+    display: flex;
+    flex-direction: column;
+  }
   li {
-    // Escreve aqui o teu SCSS para os itens da lista
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: var(--spacing-xs);
     color: var(--color-neutral-6);
   }
+
 }
   
   &__footer {
