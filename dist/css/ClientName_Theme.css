@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ==================================================================== */
 /* ==================================================================== */
 /*  ClientName Theme - Based on OutSystems UI                           */
@@ -416,7 +415,10 @@ h1, h2, h3, p {
 .appLayout--menu-closed .navmenu .navmenu__submenu,
 .appLayout--menu-closed .navmenu .navmenu__info,
 .appLayout--menu-closed .navmenu .navmenu__profile {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
 }
 .appLayout--menu-closed .navmenu .navmenu__toggle {
   left: -40px;
@@ -625,27 +627,28 @@ h1, h2, h3, p {
   top: 0;
   bottom: 0;
 }
-.navbar--expanded {
+.appLayout--navbar-open .navbar {
   width: 222px;
   min-width: 222px;
   box-shadow: 10px 0 30px rgba(0, 0, 0, 0.25);
   z-index: 10000;
 }
-.navbar--expanded .navbar__label {
-  display: block;
+.appLayout--navbar-open .navbar .navbar__label {
   opacity: 1;
   visibility: visible;
+  position: relative;
   transform: translateX(0);
-  transition-delay: 0.2s;
+  transition-delay: 0.15s;
 }
-.navbar--expanded .navbar__button, .navbar--expanded .navbar__button--active {
+.appLayout--navbar-open .navbar .navbar__button, .appLayout--navbar-open .navbar .navbar__button--active {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   padding-left: 16px;
   gap: 12px;
-  width: 100%;
+  width: 180px;
+  margin: 0 auto;
 }
 .navbar__top {
   display: flex;
@@ -692,9 +695,9 @@ h1, h2, h3, p {
   color: #E9ECEF;
   opacity: 0;
   visibility: hidden;
-  display: none;
+  position: absolute;
   white-space: nowrap;
-  transform: translateX(-10px);
+  transform: translateX(-15px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .navbar__defbutton {
@@ -744,14 +747,13 @@ h1, h2, h3, p {
   min-width: 0 !important;
   padding: 0 !important;
   overflow: visible;
-  /* Escondemos o conteúdo, mas NÃO o botão */
 }
 .navmenu--collapsed .navmenu__submenu,
 .navmenu--collapsed .navmenu__profile,
 .navmenu--collapsed .navmenu__info {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease 0.4s, visibility 0.4s ease 0.2s;
 }
 .navmenu__toggle {
   display: flex;
@@ -779,6 +781,7 @@ h1, h2, h3, p {
   overflow-y: auto;
   overflow-x: hidden;
   padding: var(--spacing-xl) var(--spacing-l);
+  transition: opacity 0.3s ease 0.1s, visibility 0.3s ease 0.1s;
 }
 .navmenu__profile {
   display: flex;

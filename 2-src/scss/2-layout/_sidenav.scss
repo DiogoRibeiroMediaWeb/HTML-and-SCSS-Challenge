@@ -13,18 +13,18 @@
   top: 0;
   bottom: 0;
 
-  &--expanded {
+  .appLayout--navbar-open & {
     width: 222px;
     min-width: 222px;
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.25);
     z-index: 10000;
 
     .navbar__label {
-      display: block; // Faz o texto existir novamente
       opacity: 1;
       visibility: visible;
+      position: relative;
       transform: translateX(0);
-      transition-delay: 0.2s; // Delay para a barra abrir primeiro
+      transition-delay: 0.15s;
     }
 
     // Alinhamento horizontal para o texto ficar à frente da imagem
@@ -35,7 +35,8 @@
       justify-content: flex-start;
       padding-left: 16px;
       gap: 12px;
-      width: 100%;
+      width: 180px; // Largura fixa para os botões não "dançarem"
+      margin: 0 auto; // Centraliza o bloco do botão na barra larga
     }
   }
 
@@ -94,10 +95,10 @@
 
     opacity: 0;
     visibility: hidden;
-    display: none;
+    position: absolute;
 
     white-space: nowrap; // Impede que o texto quebre linha
-    transform: translateX(-10px); // Pequeno deslize para a animação
+    transform: translateX(-15px); // Pequeno deslize para a animação
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
 

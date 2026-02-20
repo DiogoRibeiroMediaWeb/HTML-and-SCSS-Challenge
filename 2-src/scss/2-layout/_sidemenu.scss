@@ -15,13 +15,13 @@
     padding: 0 !important;
     overflow: visible;
 
-    /* Escondemos o conteúdo, mas NÃO o botão */
     .navmenu__submenu,
     .navmenu__profile,
     .navmenu__info {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.2s ease;
+      opacity: 1;
+    visibility: visible;
+    // O segredo está aqui: espera 0.2s antes de mostrar o conteúdo
+    transition: opacity 0.4s ease 0.4s, visibility 0.4s ease 0.2s;
     }
   }
 
@@ -58,6 +58,7 @@
     overflow-y: auto;   
     overflow-x: hidden; 
     padding: var(--spacing-xl) var(--spacing-l);
+    transition: opacity 0.3s ease 0.1s, visibility 0.3s ease 0.1s;
   }
 
   /////////////////////////////////////////profile que envolve o avatar, nome, row e bloqueio////////////////////////////////////////
